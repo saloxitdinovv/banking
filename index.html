@@ -1,13 +1,38 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="icon" href="/public/favicon/free-icon-credit-card-147258.png">
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Банк</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <div class="container_glav">
+      <div class="hello">
+        <h1 class="hello_name">Добро пожаловать, <span class="hello_span">Alex Adams!</span></h1>
+        <h1 class="hello_email">alexadams@google.com</h1>
+      </div>
+      <div class="card_glav">
+        <h1 class="card_h1">Мои кошельки</h1>
+        <div class="card_div">
+
+        </div>
+        <a href="/pages/all_cards/index.html" class="all_cards">Смотреть все кошельки</a>
+      </div>
+      <div class="transactions">
+        <h1 class="later_transaction">Последние транзакции</h1>
+        <table class="transaction_div">
+          <tr>
+            <th>ID</th>
+            <th>Отправлено с кошелька</th>
+            <th>Категория </th>
+            <th>Сумма транзации</th>
+            <th>Когда</th>
+          </tr>
+        </table>
+        <a href="/pages/all_pay/index.html" class="all_pay">Смотреть все оплаты</a>
+      </div>
+    </div>
+    <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
