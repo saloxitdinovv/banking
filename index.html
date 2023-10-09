@@ -1,13 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link rel="stylesheet" href="banking/sass/style.css" />
   </head>
+  <style>
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
   <body>
-    <div id="app"></div>
+    <div class="links">
+      <a href="/pages/signup/">Зарегестрироваться</a>
+      <a href="/pages/signin/">Войти</a>
+      <a href="/pages/mainPage/">Главная</a>
+    </div>
+
     <script type="module" src="/main.js"></script>
   </body>
 </html>
