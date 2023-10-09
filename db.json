@@ -1,3 +1,18 @@
 {
-  "users": []
+  "users": [
+    {
+      "email": "dsarifkulo021@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "2232",
+      "id": 1
+    },
+    {
+      "email": "farrux@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "2232",
+      "id": 2
+    }
+  ]
 }
