@@ -2,24 +2,35 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BANKING</title>
-  <link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BANKING</title>
+	<script defer type="module" src="/modules/police.js"></script>
+	<link rel="stylesheet" href="/style.scss">
 </head>
 
 <body>
-  <div class="main_box">
-    <a href="/pages/signin/">
-      <button class="sign in">sign in</button>
-    </a>
-    <a href="/pages/signup/">
-      <button class="sign up">sign up</button>
-    </a>
-  
-  </div>
+	<header>
+		<div class="box">
 
-  <script type="module" src="/main.js"></script>
+		</div>
+	</header>
+
+	<div class="greetings">
+		<h1>
+			Добро пожаловать, <span class="user_name"></span>
+		</h1>
+		<p class="user_email"></p>
+	</div>
+
+	<div class="wallets_box"></div>
+
+	<div class="transactions"></div>
+
+
+	<script type="module" src="/modules/header.js"></script>
+	<script type="module" src="/main.js"></script>
+
 </body>
 
 </html>
