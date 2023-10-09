@@ -14,7 +14,7 @@ form.onsubmit = (event) => {
   if (error) {
   } else {
     submit();
-    window.location.href = "/pages/mainPage/";
+    window.location.href = "/pages/signin/";
   }
 };
 function submit() {

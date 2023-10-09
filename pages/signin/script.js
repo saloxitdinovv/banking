@@ -2,6 +2,9 @@ let form = document.forms[0]
 let emailInp = document.querySelector('.email')
 let passwordInp = document.querySelector('.password')
 
+
+emailInp.value = JSON.parse(localStorage.getItem('user')).email
+
 form.onsubmit = (event) => {
   event.preventDefault()
   if (emailInp.value === JSON.parse(localStorage.getItem('user')).email && passwordInp.value === JSON.parse(localStorage.getItem('user')).password) {
