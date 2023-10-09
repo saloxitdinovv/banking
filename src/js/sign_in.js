@@ -36,9 +36,5 @@ let password = document.querySelector('.password_in')
     }
 
 btn.onclick = () => {
-    let todo = {
-        email: email.value,
-        password: password.value
-    }
-    localStorage.setItem('user', JSON.stringify(todo))
+    let email_local = localStorage.getItem('user')
 }
