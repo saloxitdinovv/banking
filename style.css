@@ -14,10 +14,12 @@
   margin: 0 auto;
   width: 1200px;
 }
-header{
+
+header {
   background: rgb(233, 233, 233);
 
 }
+
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -49,39 +51,68 @@ header{
   height: 170px;
   background: #000;
   border-radius: 15px;
-  background: linear-gradient(84deg, #D7816A 2.27%, #BD4F6C 92.26%);
+
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  width: 100%;
 }
 
 .cards {
-  display: flex;
-  gap: 30px;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(270px , 1fr));
+  gap: 15px;
 }
-.card:nth-child(2n-1){
+
+.card:nth-child(4n+3) {
+  background: linear-gradient(84deg, #20BF55 2.27%, #01BAEF 92.26%);
+}
+
+.card:nth-child(4n+2) {
+  background: linear-gradient(84deg, #5F0A87 2.27%, #A4508B 92.26%);
+}
+
+.card:nth-child(4n+1) {
+  background: linear-gradient(84deg, #D7816A 2.27%, #BD4F6C 92.26%);
+}
+.card:nth-child(4n){
   border-radius: 15px;
-    background: linear-gradient(84deg, #20BF55 2.27%, #01BAEF 92.26%);
+background: linear-gradient(84deg, #380036 2.27%, #0CBABA 92.26%);
 }
-.card:nth-child(4){
-  border-radius: 15px;
-    background: linear-gradient(84deg, #bf2020 2.27%, #01BAEF 92.26%);
+.wallets {
+  margin: 50px 0;
 }
-.wallets{
-  margin: 50px 0 ;
-}
-.head{
+
+.head {
   color: rgb(192, 192, 192);
   text-align: left;
   border-bottom: 1px solid #000;
 }
-td{
+
+td {
   border-bottom: 2px solid #e7e7e7;
   padding: 10px 0;
 }
-table{
+
+table {
   border: none;
+}
+
+.myWallets {
+  margin: 44px 0;
+}
+.blue_btn{
+  background: rgb(0, 68, 255);
+  width: 400px;
+  text-align: center;
+  color: #e7e7e7;
+  padding: 20px 0 ;
+  border-radius: 10px;
+  margin-top: 44px;
+}
+a{
+  text-decoration: none;
+  color: black;
 }
