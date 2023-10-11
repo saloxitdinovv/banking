@@ -28,7 +28,7 @@ function submit() {
         user[key] = value
         user["isreg"] = false
     })
-
+    // fetch()
     console.log(user);
     localStorage.setItem("user", JSON.stringify(user))
 }

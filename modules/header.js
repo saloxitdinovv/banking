@@ -5,7 +5,7 @@ if (user!== null) {
     header.innerHTML = `      <div class="leftside">
     <a href="/index.html">Главная</a>
     <a href="/pages/wallets/">Мои кошельки</a>
-    <p>Мои транзакции</p>
+    <a href="/pages/transactions/">Мои транзакции</a>
     </div>
     <div class="rightside">
     <p>${user.email}</p>

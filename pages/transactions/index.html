@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-
     <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <header>
@@ -16,19 +15,24 @@
     </header>
     <div class="container">
         <div class="myWallets">
-            <h1>Мои кошельки</h1>
+            <h1>Мои транзакции</h1>
             <a class="mail" href="">alexadams@google.com</a>
         </div>
-        <div class="cards">
-
-        </div>
-        <a href="/pages/add_card/" class="blue_btn">
-            Добавить
-        </a>
+        <table width = "1200 ">
+            <tr class="head">
+              <th>ID</th>
+              <th>Отправлено с кошелька</th>
+              <th>Категория </th>
+              <th>Сумма транзации</th>
+              <th>Когда</th>
+            </tr>
+      
+          </table>
     </div>
-    <script type="module" src="/module/user_data.js"></script>
-    <script type="module" src="/modules/cards.js"></script>
-    <script src="./index.js"></script>
     <script type="module" src="/modules/header.js"></script>
+    <script type="module" src="/module/user_data.js"></script>
+    <script type="module" src="/modules/transaction.js"></script>
+    <script src="./index.js"></script>
+    
 </body>
 </html>
