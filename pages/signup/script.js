@@ -14,12 +14,12 @@ form.onsubmit = (e) => {
             inp.classList.remove("error");
         }
     })
-
     if (error) {
-        return error;
+        return error
     } else {
-        submit();
+        submit()
     }
+
 }
 
 
@@ -32,8 +32,29 @@ function submit() {
         user[key] = value;
     });
 
-    console.log(user);
-
-    localStorage.setItem('user', JSON.stringify(user));
-    window.location.href = "/pages/signin/";
+    fetch('http://localhost:7000/users?email=' + user.email)
+        .then(res => res.json())
+        .then(res => {
+            if(res.length > 0){
+                alert('Уже занято!')
+            } else {
+                post(user)
+            }
+        })
+        
+    }
+function post(user){
+    fetch('http://localhost:7000/users', {
+        method: 'post',
+        body: JSON.stringify(user),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(res => {
+        if(res.status === 200 || res.status === 201){
+            localStorage.setItem('user', JSON.stringify(user));
+            window.location.href = "/pages/signin/"
+        }
+    })
 }
