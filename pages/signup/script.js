@@ -43,7 +43,18 @@ function submit() {
         })
 
     function postUser() {
-        fetch("http://localhost:7000/users", {
+    fetch('http://localhost:7000/users?email=' + user.email)
+        .then(res => res.json())
+        .then(res => {
+            if (res.length > 0) {
+                alert('Эта почта уже зарегистрирована')
+            } else {
+                post()
+            }
+        })
+
+    function post() {
+        fetch('http://localhost:7000/users', {
                 method: "post",
                 body: JSON.stringify(user),
                 headers: {
@@ -57,4 +68,4 @@ function submit() {
                 }
             })
     }
-}
+}}
