@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "email": "alibabay069@gmail.com",
+      "name": "a",
+      "surname": "a",
+      "password": "a",
+      "id": 1
+    },
+    {
+      "email": "a@gmail.com",
+      "name": "a",
+      "surname": "a",
+      "password": "a",
+      "id": 2
+    },
+    {
+      "email": "aalibabay069@gmail.com",
+      "name": "a",
+      "surname": "a",
+      "password": "a",
+      "id": 1
+    },
+    {
+      "email": "aa@gmail.com",
+      "name": "a",
+      "surname": "a",
+      "password": "a",
+      "id": 2
+    }
+  ]
+}
