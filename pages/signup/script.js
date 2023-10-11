@@ -53,7 +53,6 @@ function post(user){
     })
     .then(res => {
         if(res.status === 200 || res.status === 201){
-            localStorage.setItem('user', JSON.stringify(user));
             window.location.href = "/pages/signin/"
         }
     })
