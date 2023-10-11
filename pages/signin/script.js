@@ -3,37 +3,36 @@ let inputs = form.querySelectorAll('input')
 let inputEmail = document.querySelector('.email')
 let inputPassword = document.querySelector('.password')
 
-let user = JSON.parse(localStorage.getItem('user'))
-
-inputEmail.value = user.email
-
-let correctPassword = user.password
-
 form.onsubmit = (e) => {
     e.preventDefault();
 
-    let error = false;
+    let error = true
 
     inputs.forEach((inp) => {
         if (inp.value.length === 0) {
-            error = true;
+            error = false
             inp.classList.add("error");
         } else {
             inp.classList.remove("error");
         }
     })
 
-    if (inputPassword.value === correctPassword) {
-        inputPassword.classList.remove("error");
-    } else {
-        error = true;
-        inputPassword.classList.add("error");
-    }
+    fetch('http://localhost:7000/users?email=' + inputEmail.value)
+        .then(res => res.json())
+        .then(res => {
+            
+            let [user] = res
 
-    if (error) {
-        return error;
-        alert('Сначала зарегестрируйтесь')
-    } else {
-        window.location.href = "/pages/main_page/";
-    }
+            if(user) {
+                if(user.password === inputPassword.value) {
+                    localStorage.setItem('user', JSON.stringify(user))
+                    location.assign('/')
+                } else {
+                    alert('wrong password')
+                }
+            }
+        })
+
+
 }
+

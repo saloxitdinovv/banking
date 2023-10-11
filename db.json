@@ -6,20 +6,30 @@
       "surname": "Sharifkulov",
       "password": "2232",
       "id": 1
-    },
-    {
-      "email": "farrux@gmail.com",
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "password": "2232",
-      "id": 2
-    },
-    {
-      "email": "farrux777@gmail.com",
-      "name": "Farrux",
-      "surname": "Isroilov",
-      "password": "2232",
-      "id": 3
     }
-  ]
+  ],
+  "cards": [
+    {
+      "user_id": 1,
+      "name": "Daler",
+      "currency": "USD",
+      "balance": "2222",
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "name": "VISA",
+      "currency": "BTC",
+      "balance": "100",
+      "id": 4
+    },
+    {
+      "user_id": 1,
+      "name": "FAXA",
+      "currency": "FARRUXCOIN",
+      "balance": "30000",
+      "id": 5
+    }
+  ],
+  "transactions": []
 }
