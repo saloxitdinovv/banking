@@ -38,7 +38,4 @@ for (let i = 0; i < 7; i++) {
     wallet.append(currency)
 }
 
-let add_btn = document.createElement('button')
-add_btn.innerHTML = 'Добавить'
-
-wallets_box.append(myWallet, wallets, add_btn)
+wallets_box.append(myWallet, wallets)
