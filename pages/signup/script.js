@@ -32,15 +32,26 @@ function submit() {
         user[key] = value;
     });
 
-    fetch('http://localhost:7000/users?email=' + user.email)
+    fetch("http://localhost:7000/users?email=" + user.email)
         .then(res => res.json())
         .then(res => {
-            if (res.length > 0) {
-                alert('Эта почта уже зарегистрирована')
-            } else {
+            if(res.length > 0){
+                alert('Эта почта уже зарегестрированна')
+            }else{
                 post()
             }
         })
+
+    // function postUser() {
+    // fetch('http://localhost:7000/users?email=' + user.email)
+    //     .then(res => res.json())
+    //     .then(res => {
+    //         if (res.length > 0) {
+    //             alert('Эта почта уже зарегистрирована')
+    //         } else {
+    //             post()
+    //         }
+    //     })
 
     function post() {
         fetch('http://localhost:7000/users', {
@@ -53,10 +64,8 @@ function submit() {
             .then(res => {
                 if (res.status === 200 || res.status === 201) {
                     localStorage.setItem('user', JSON.stringify(user));
-                    location.assign('/pages/signin')
+                    location.assign("/pages/signin/index.html")
                 }
             })
     }
-
-
 }

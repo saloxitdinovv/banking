@@ -20,9 +20,9 @@ links[2].innerHTML = 'Мои транзакции'
 email.innerHTML = user?.email
 // logOut.href = '/pages/signin/'
 image.src = 'https://cdn-icons-png.flaticon.com/128/4043/4043198.png'
-links[0].href = '#'
-links[1].href = '#'
-links[2].href = '#'
+links[0].href = '/index.html'
+links[1].href = '/pages/all_cards/index.html'
+links[2].href = '/pages/all_transactions/index.html'
 
 
 image.classList.add('logOutIcon')

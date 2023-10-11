@@ -34,7 +34,7 @@ wallets.classList.add('wallets')
 
 myWallet.innerHTML = 'Мои кошельки'
 seeAll.innerHTML = 'Смотреть все кошельки'
-seeAll.href = '#'
+seeAll.href = '/pages/all_cards/index.html'
 
 wallets_box.append(myWallet, wallets, seeAll)
 
@@ -48,7 +48,7 @@ lastTransactions.innerHTML = 'Последние транзакции'
 
 let seeAllTransactions = document.createElement('a')
 seeAllTransactions.innerHTML = 'Смотреть все оплаты'
-seeAllTransactions.href = '#'
+seeAllTransactions.href = '/pages/all_transactions/index.html'
 
 let table = document.createElement('table');
 
