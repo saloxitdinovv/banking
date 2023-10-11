@@ -87,7 +87,12 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-
+	.wllets_div{
+		flex-wrap: wrap;
+		width: 100%;
+		display: flex;
+		height: fit-content;
+	}
 	h1 {
 		color: #000;
 		font-size: 24px;
@@ -140,6 +145,7 @@ header {
     border-radius: 15px;
     margin-right: 0;
 	margin-bottom: 25px;
+	margin-left: 10px;
 }
 .add{
 	height: 55px;

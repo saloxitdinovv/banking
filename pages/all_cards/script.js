@@ -21,6 +21,8 @@ let img = [
 ]
 
 let wallets = document.createElement('div')
+
+wallets.classList.add('wllets_div')
 for (let i = 0; i < 7; i++) {
     let wallet = document.createElement('div')
     wallets.append(wallet)
