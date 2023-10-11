@@ -13,6 +13,13 @@
       "surname": "Sharifkulov",
       "password": "2232",
       "id": 2
+    },
+    {
+      "email": "farrux777@gmail.com",
+      "name": "Farrux",
+      "surname": "Isroilov",
+      "password": "2232",
+      "id": 3
     }
   ]
 }
