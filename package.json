@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start":"json-server -p 7000 -w db.json"
+    
   },
   "devDependencies": {
     "vite": "^4.4.5"

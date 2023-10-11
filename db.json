@@ -1,0 +1,91 @@
+{
+  "users": [{
+    "email": "eqeqwe@eqew",
+    "name": "eqweqw",
+    "lastname": "eqwe",
+    "password": "www",
+    "id": 1
+  }],
+  "wallets": [{
+      "walletName": "Visa",
+      "currency": "Rub",
+      "id": 1
+    },
+    {
+      "walletName": "Visa",
+      "currency": "Rub",
+      "id": 2
+    },
+    {
+      "walletName": "Visa",
+      "currency": "Rub",
+      "id": 3
+    }
+  ],
+  "transactions": [{
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 1
+    },
+    {
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 2
+    },
+    {
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 3
+    },
+    {
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 4
+    },
+    {
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 5
+    },
+    {
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 6
+    },
+    {
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 7
+    }, {
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 8
+    },
+    {
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 9
+    },
+    {
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 10
+    },
+    {
+      "from": "Visa",
+      "sum": "100,000",
+      "category": "Автомобиль",
+      "id": 11
+    }
+  ]
+}

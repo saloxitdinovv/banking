@@ -14,7 +14,7 @@ form.onsubmit = (event) => {
   if (error) {
   } else {
     submit();
-    window.location.href = "/pages/signin/";
+    window.location.href = "/pages/mainPage/";
   }
 };
 function submit() {
@@ -25,4 +25,11 @@ function submit() {
   });
   localStorage.setItem("user", JSON.stringify(user));
   console.log(JSON.parse(localStorage.getItem("user")));
+  fetch("http://localhost:7000/wallets", {
+    method: "post",
+    body: JSON.stringify({walletName:user.walletName,currency:user.currency}),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 }

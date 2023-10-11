@@ -14,7 +14,7 @@ form.onsubmit = (event) => {
   if (error) {
   } else {
     submit();
-    window.location.href = "/pages/signin/";
+    window.location.href = "/pages/mainPage/";
   }
 };
 function submit() {
@@ -25,9 +25,9 @@ function submit() {
   });
   localStorage.setItem("user", JSON.stringify(user));
   console.log(JSON.parse(localStorage.getItem("user")));
-  fetch("http://localhost:7000/users", {
+  fetch("http://localhost:7000/transactions", {
     method: "post",
-    body: JSON.stringify({ email:user.email,name:user.name,lastname:user.lastname,password:user.password}),
+    body: JSON.stringify({from:user.from,sum:user.sum,category:user.category}),
     headers: {
       "Content-Type": "application/json",
     },

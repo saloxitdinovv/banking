@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Gilroy';
+    text-decoration: none;
 }
 
 .container {
@@ -13,9 +14,9 @@
 
 header {
     background-color: whitesmoke;
-    padding: 20px;
+    padding: 20px 200px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -46,7 +47,7 @@ h1 {
 }
 
 .wallet {
-    width: 280px;
+    width: 240px;
     height: 160px;
     background: linear-gradient(to right, blue, red);
     padding: 15px;
@@ -58,6 +59,7 @@ h1 {
 
 .allWallets {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin-top: 30px;
 }
