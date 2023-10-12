@@ -1,9 +1,8 @@
-export function transactions(){
+export function transactions(arr){
     let lastTransactions = document.createElement('h1')
     lastTransactions.innerHTML = 'Последние транзакции'
     
     let table = document.createElement('table');
-    
     let th = document.createElement('tr');
     let thText = ['ID', 'Отправлено с кошелька', 'Категория', 'Сумма транзации', 'Когда'];
     
@@ -15,9 +14,9 @@ export function transactions(){
     
     table.append(th);
     
-    for (let i = 0; i < 7; i++) {
+    for (let item of arr) {
         let tr = document.createElement('tr');
-        let tdText = ['1232312', 'VISA', 'Автомобиль', '414,000,000', '4 дня назад'];
+        let tdText = [item.id, item.wallet, item.category, item.price, item.data];
     
         tdText.forEach(text => {
             let td = document.createElement('td');

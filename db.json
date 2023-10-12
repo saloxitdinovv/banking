@@ -6,30 +6,53 @@
       "surname": "Sharifkulov",
       "password": "2232",
       "id": 1
+    },
+    {
+      "email": "farrux777@gmail.com",
+      "name": "Farrux",
+      "surname": "Isroilov",
+      "password": "2232",
+      "id": 2
     }
   ],
   "cards": [
     {
-      "user_id": 1,
-      "name": "Daler",
-      "currency": "USD",
-      "balance": "2222",
-      "id": 3
-    },
-    {
-      "user_id": 1,
-      "name": "VISA",
+      "user_id": 2,
+      "name": "HUMO",
       "currency": "BTC",
-      "balance": "100",
-      "id": 4
+      "balance": "1000000",
+      "id": 7
     },
     {
-      "user_id": 1,
-      "name": "FAXA",
-      "currency": "FARRUXCOIN",
-      "balance": "30000",
-      "id": 5
+      "user_id": 2,
+      "name": "UZCARD",
+      "currency": "UZS",
+      "balance": "1000000",
+      "id": 8
+    },
+    {
+      "user_id": 2,
+      "name": "VISA",
+      "currency": "USD",
+      "balance": "1000000",
+      "id": 9
+    },
+    {
+      "user_id": 2,
+      "name": "QIWI",
+      "currency": "USD",
+      "balance": "1000000",
+      "id": 10
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "user_id": 2,
+      "data": "2023.9.4.9.35",
+      "wallet": "VISA",
+      "price": "11131",
+      "category": "Машына",
+      "id": 1
+    }
+  ]
 }

@@ -40,6 +40,6 @@ form.onsubmit = (e) => {
         })
         .then(res => console.log(res))
         
-        // location.assign('/pages/cards/')
+        location.assign('/pages/cards/')
     }
 }

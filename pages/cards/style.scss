@@ -12,7 +12,13 @@ header {
 	height: 70px;
 	background: #f0f0f0;
 }
-
+button {
+	width: 300px;
+	height: 50px;
+	background-color: blue;
+	border: 2px blue solid;
+	border-radius: 10px;
+}
 .box {
 	width: 1200px;
 	margin: 0 auto;
@@ -84,7 +90,7 @@ header {
 }
 
 .wallets_box {
-	width: 1200px;
+	width: 1208px;
 	margin: 0 auto;
 	padding-top: 75px;
 	display: flex;
@@ -102,8 +108,7 @@ header {
 
 	.wallets {
 		display: flex;
-		justify-content: space-between;
-
+		flex-wrap: wrap;
 		.wallet_1 {
 			width: 282px;
 			height: 160px;
@@ -113,6 +118,8 @@ header {
 			padding: 20px 215px 20px 25px;
 			border-radius: 15px;
 			background: linear-gradient(84deg, #d7816a 2.27%, #bd4f6c 92.26%);
+			margin-right: 20px;
+			margin-bottom: 20px;
 		}
 
 		.wallet_2 {
@@ -238,4 +245,21 @@ td {
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
+}
+.add{
+	height: 55px;
+	width: 500px;
+	padding: 5px;
+	border-radius: 10px;
+	background: #0047FF;
+	border: none;
+	margin-top: 25px;
+	a{
+		text-decoration: none;
+		color: white;
+		font-size: 18px;
+		font-weight: 600;
+		width: 100%;
+		height: 100%;
+	}
 }
