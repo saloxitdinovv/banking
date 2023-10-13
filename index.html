@@ -9,17 +9,32 @@
 </head>
 
 <body>
-  <div class="main_box">
-    <a href="/pages/signin/">
-      <button class="sign in">sign in</button>
-    </a>
-    <a href="/pages/signup/">
-      <button class="sign up">sign up</button>
-    </a>
-  
-  </div>
+	<header>
+		<div class="box">
 
-  <script type="module" src="/main.js"></script>
+		</div>
+	</header>
+
+	<div class="greetings">
+		<h1>
+			Добро пожаловать, <span class="user_name"></span>
+		</h1>
+		<p class="user_email"></p>
+	</div>
+
+	<div class="wallets_box">
+		<a href="./pages/cards/">Смотреть все кошельки</a>
+	</div>
+
+	<div class="transactions">
+		<a href="./pages/transictions/">Посмотреть все транзакции</a>
+	</div>
+
+
+	<script type="module" src="/modules/header.js"></script>
+	<script type="module" src="/main.js"></script>
+	<script type="module" src="./modules/functions.js"></script>
+	<script type="module" src="./modules/transictions.js"></script>
 </body>
 
 </html>
