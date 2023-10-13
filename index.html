@@ -1,53 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml"
-    href="https://i.pinimg.com/474x/4c/46/ee/4c46ee47e0710a6d928454f68fc4ee17.jpg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/style.css">
-  <title>Bankk</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BANKING</title>
+	<script defer type="module" src="/modules/police.js"></script>
+	<link rel="stylesheet" href="/style.scss">
 </head>
 
 <body>
-  <header>
-    <div class="header">
+	<header>
+		<div class="box">
 
-    </div>
-  </header>
-  <div class="container">
-    
+		</div>
+	</header>
 
-    <div class="welcome">
-      <h1 class="name">Добро пожаловать, Alex Adams!</h1>
-      <a class="mail" href="">alexadams@google.com</a>
-    </div>
-    <div class="wallets">
-      <h2>Мои кошельки</h2>
-      
-      <div class="cards">
-      </div>
-      <a href="/pages/wallets/">Смотреть все кошельки</a>
-    </div>
-    <h2>Последние транзакции</h2>
-    <table width = "1200 ">
-      <tr class="head">
-        <th>ID</th>
-        <th>Отправлено с кошелька</th>
-        <th>Категория </th>
-        <th>Сумма транзации</th>
-        <th>Когда</th>
-      </tr>
+	<div class="greetings">
+		<h1>
+			Добро пожаловать, <span class="user_name"></span>
+		</h1>
+		<p class="user_email"></p>
+	</div>
 
-    </table>
-  </div>
-  <script type="module" src="/modules/transaction.js"></script>
-  <script type="module" src="./main.js"></script>
-  <script type="module" src="/modules/header.js"></script>
-  <script type="module" src="/modules/cards.js"></script>
-  
+	<div class="wallets_box">
+		<a href="./pages/cards/">Смотреть все кошельки</a>
+	</div>
 
+	<div class="transactions">
+		<a href="./pages/transictions/">Посмотреть все транзакции</a>
+	</div>
+
+
+	<script type="module" src="/modules/header.js"></script>
+	<script type="module" src="/main.js"></script>
+	<script type="module" src="./modules/functions.js"></script>
+	<script type="module" src="./modules/transictions.js"></script>
 </body>
 
 </html>

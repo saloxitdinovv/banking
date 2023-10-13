@@ -1,11 +1,15 @@
+import { user } from "./modules/user_data"
+import { wallets } from "./modules/functions"
+import { transactions } from "./modules/transictions"
 
-import { user } from "/modules/user_data.js";
+////////////////////////////////
+let userName = document.querySelector('.user_name')
+userName.innerHTML = user?.name
 
-let nameWelcome = document.querySelector('.name')
-let mail = document.querySelector(".mail")
-mail.innerHTML = user.email
-nameWelcome.innerHTML = `Добро пожаловать,${user.name} ${user.surname}!`
+let userEmail = document.querySelector('.user_email')
+userEmail.innerHTML = user?.email
 
+////////////////////////////////
 
-
-console.log(location);
+wallets()
+transactions()

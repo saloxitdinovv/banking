@@ -1,27 +1,41 @@
-import { user } from "/modules/user_data.js"
-let header = document.querySelector(".header")
-if (user!== null) {
-    
-    header.innerHTML = `      <div class="leftside">
-    <a href="/index.html">Главная</a>
-    <a href="/pages/wallets/">Мои кошельки</a>
-    <a href="/pages/transactions/">Мои транзакции</a>
-    </div>
-    <div class="rightside">
-    <p>${user.email}</p>
+import { user } from "./user_data"
 
-    <img class="exit" width="24px" src="https://cdn1.iconfinder.com/data/icons/arrows-vol-1-5/24/logout2-256.png" alt=""></img>
-    </div>`
-    
-}else{
-    header.innerHTML = `      <div class="leftside">
-    <p>Главная</p>
-    <p>Мои кошельки</p>
-    <p>Мои транзакции</p>
-    </div>
-    <div class="rightside">
-    <a href="/pages/register/index.html" class="reg">Register</a>
+let header = document.querySelector('.box')
+let nav = document.createElement('nav')
+let accountBox = document.createElement('div')
+let links = []
+for (let i = 0; i < 3; i++) {
+    let link = document.createElement('a')
+    link.classList.add(`nav-link_${i + 1}`)
+    links.push(link)
+}
+let email = document.createElement('p')
+let logOut = document.createElement('a')
+let image = document.createElement('img')
 
-    </div>`
-    
+
+links[0].innerHTML = 'Главная'
+links[1].innerHTML = 'Мои кошельки'
+links[2].innerHTML = 'Мои транзакции'
+email.innerHTML = user?.email
+// logOut.href = '/pages/signin/'
+image.src = 'https://cdn-icons-png.flaticon.com/128/4043/4043198.png'
+links[0].href = '/'
+links[1].href = '/pages/cards/'
+links[2].href = '/pages/transictions/'
+
+
+image.classList.add('logOutIcon')
+accountBox.classList.add('accountBox')
+logOut.classList.add('logOut')
+
+
+header.append(nav, accountBox)
+nav.append(links[0], links[1], links[2])
+accountBox.append(email, logOut)
+logOut.append(image)
+
+logOut.onclick = () => {
+    localStorage.removeItem('user')
+    location.assign('/pages/signup/')
 }

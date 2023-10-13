@@ -1,32 +1,49 @@
 {
   "users": [
     {
+      "email": "dsarifkulo021@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "2232",
+      "id": 1
+    },
+    {
       "email": "alibabay069@gmail.com",
-      "name": "a",
-      "surname": "a",
-      "password": "a",
-      "id": 1
-    },
-    {
-      "email": "a@gmail.com",
-      "name": "a",
-      "surname": "a",
-      "password": "a",
-      "id": 2
-    },
-    {
-      "email": "aalibabay069@gmail.com",
-      "name": "a",
-      "surname": "a",
-      "password": "a",
-      "id": 1
-    },
-    {
-      "email": "aa@gmail.com",
-      "name": "a",
+      "name": "Ayub",
       "surname": "a",
       "password": "a",
       "id": 2
     }
-  ]
+  ],
+  "cards": [
+    {
+      "user_id": 1,
+      "name": "Daler",
+      "currency": "USD",
+      "balance": 2075,
+      "id": 3
+    },
+    {
+      "user_id": 1,
+      "name": "VISA",
+      "currency": "BTC",
+      "balance": 254,
+      "id": 4
+    },
+    {
+      "user_id": 1,
+      "name": "FAXA",
+      "currency": "FARRUXCOIN",
+      "balance": "30000",
+      "id": 5
+    },
+    {
+      "user_id": 2,
+      "name": "Ayub",
+      "currency": "a",
+      "balance": 98,
+      "id": 6
+    }
+  ],
+  "transactions": []
 }
