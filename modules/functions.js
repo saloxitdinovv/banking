@@ -1,20 +1,22 @@
-export function wallets(){
+export function wallets(arr){
     let wallets_box = document.querySelector('.wallets_box')
     let myWallet = document.createElement('h1')
     
     let wallets = document.createElement('div')
-    for (let i = 0; i < 4; i++) {
+    console.log(arr);
+
+    for (let item of arr) {
         let wallet = document.createElement('div')
         wallets.append(wallet)
-        wallet.classList.add(`wallet_${i + 1}`)
+        wallet.classList.add(`wallet_${1}`)
     
         let walletName = document.createElement('h2')
-        walletName.innerHTML = 'VISA'
+        walletName.innerHTML = item.name
         walletName.classList.add('walletName')
         wallet.append(walletName)
     
         let currency = document.createElement('h2')
-        currency.innerHTML = 'RUB'
+        currency.innerHTML = item.currency
         currency.classList.add('currency')
         wallet.append(currency)
     }
