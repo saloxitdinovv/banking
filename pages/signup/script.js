@@ -1,3 +1,8 @@
+import {
+    getData,
+    postData
+} from "../../modules/http";
+
 let form = document.forms.signup
 let inputs = form.querySelectorAll('input')
 
@@ -32,28 +37,17 @@ function submit() {
         user[key] = value;
     });
 
-    fetch('http://localhost:7000/users?email=' + user.email)
-        .then(res => res.json())
+    getData('/users?email=' + user.email)
         .then(res => {
-            if(res.length > 0){
+            if (res.length > 0) {
                 alert('Уже занято!')
-            } else {
-                post(user)
+                return
             }
+            postData('/users', user)
+                .then(res => {
+                    if (res.status === 200 || res.status === 201) {
+                        location.assign('/pages/signin')
+                    }
+                })
         })
-        
-    }
-function post(user){
-    fetch('http://localhost:7000/users', {
-        method: 'post',
-        body: JSON.stringify(user),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(res => {
-        if(res.status === 200 || res.status === 201){
-            window.location.href = "/pages/signin/"
-        }
-    })
 }

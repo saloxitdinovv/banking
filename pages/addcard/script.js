@@ -3,8 +3,6 @@ import { user } from "/modules/user_data"
 let form = document.forms.addWallet
 let inps = form.querySelectorAll('input')
 
-console.log(user);
-
 form.onsubmit = (e) => {
     e.preventDefault()
 

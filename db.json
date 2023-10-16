@@ -6,6 +6,20 @@
       "surname": "Sharifkulov",
       "password": "2232",
       "id": 1
+    },
+    {
+      "email": "admin@gigy.app",
+      "name": "Daler",
+      "surname": "Daler",
+      "password": "21321312",
+      "id": 2
+    },
+    {
+      "email": "farrux@gmail.com",
+      "name": "Farrux",
+      "surname": "Farruxovich",
+      "password": "1234",
+      "id": 3
     }
   ],
   "cards": [
