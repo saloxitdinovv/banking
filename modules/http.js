@@ -40,3 +40,16 @@ export const patchData = async () => {
 
     return res
 }
+
+
+export const getSymbols = async () => {
+    const res = await fetch('https://api.apilayer.com/fixer/symbols', {
+        headers: {
+            apikey: "TGCgzIx4lrYPFz1bvQS4bX3QiLBodyDo"
+        }
+    })
+
+    const data = await res.json()
+    
+    return data
+}

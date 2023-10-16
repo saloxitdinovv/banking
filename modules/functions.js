@@ -28,3 +28,13 @@ export function wallets(arr){
     wallets_box.prepend(myWallet, wallets)
 
 }
+
+
+export function createCurrs(obj, place) {
+
+    for(let key in obj ) {
+        let opt = new Option(key, key)
+
+        place.append(opt)
+    }
+}

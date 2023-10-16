@@ -1,62 +1,69 @@
 {
-	"users": [
-		{
-			"email": "dsarifkulo021@gmail.com",
-			"name": "Daler",
-			"surname": "Sharifkulov",
-			"password": "2232",
-			"id": 1
-		},
-		{
-			"email": "admin@gigy.app",
-			"name": "Daler",
-			"surname": "Daler",
-			"password": "21321312",
-			"id": 2
-		},
-		{
-			"email": "farrux@gmail.com",
-			"name": "Farrux",
-			"surname": "Farruxovich",
-			"password": "1234",
-			"id": 3
-		}
-	],
-	"cards": [
-		{
-			"user_id": 1,
-			"name": "Daler",
-			"currency": "USD",
-			"balance": "2222",
-			"id": 3
-		},
-		{
-			"user_id": 2,
-			"name": "VISA",
-			"currency": "BTC",
-			"balance": "100",
-			"id": 4
-		},
-		{
-			"user_id": 1,
-			"name": "FAXA",
-			"currency": "FARRUXCOIN",
-			"balance": "30000",
-			"id": 5
-		}
-	],
-	"transactions": [
-		{
-			"id": 1,
-			"user_id": 1,
-			"card": {
-				"id": 1,
-				"name": "FAXA",
-				"balance": 30000
-			},
-			"total": 1000,
-			"category": "food",
-			"date": "2023-10-16"
-		}
-	]
+  "users": [
+    {
+      "email": "dsarifkulo021@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "2232",
+      "id": 1
+    },
+    {
+      "email": "admin@gigy.app",
+      "name": "Daler",
+      "surname": "Daler",
+      "password": "21321312",
+      "id": 2
+    },
+    {
+      "email": "farrux@gmail.com",
+      "name": "Farrux",
+      "surname": "Farruxovich",
+      "password": "1234",
+      "id": 3
+    }
+  ],
+  "cards": [
+    {
+      "user_id": 1,
+      "name": "Daler",
+      "currency": "USD",
+      "balance": "2222",
+      "id": 3
+    },
+    {
+      "user_id": 2,
+      "name": "VISA",
+      "currency": "BTC",
+      "balance": "100",
+      "id": 4
+    },
+    {
+      "user_id": 1,
+      "name": "FAXA",
+      "currency": "FARRUXCOIN",
+      "balance": "30000",
+      "id": 5
+    },
+    {
+      "user_id": 1,
+      "name": "GAMES",
+      "currency": "BTC",
+      "balance": "1",
+      "id": 6
+    }
+  ],
+  "transactions": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "card": {
+        "id": 1,
+        "name": "FAXA",
+        "balance": 30000
+      },
+      "total": 1000,
+      "category": "food",
+      "date": "2023-10-16"
+    }
+  ]
 }
