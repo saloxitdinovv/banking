@@ -1,6 +1,7 @@
 import { user } from "/modules/user_data"
 let form = document.forms.addTrans
 let inps = form.querySelectorAll('input')
+let name = document.querySelector('.name')
 
 form.onsubmit = (e) => {
     e.preventDefault()
@@ -41,6 +42,14 @@ form.onsubmit = (e) => {
         })
         .then(res => console.log(res))
         
-        location.assign('/pages/transictions/index.html')
+        // location.assign('/pages/transictions/index.html')
+        fetch('http://localhost:7000/cards')
+        .then(res => res)
+        .then(res => {
+            if(res.wallet === name || res.user_id === user.id){
+                transactions.push(JSON.parse(res))
+            }
+            console.log(JSON.parse(res))
+        })
     }
 }

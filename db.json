@@ -48,11 +48,35 @@
   "transactions": [
     {
       "user_id": 2,
-      "data": "2023.9.4.9.35",
+      "data": "2023.9.6.8.51",
       "wallet": "VISA",
-      "price": "11131",
-      "category": "Машына",
+      "price": "1120",
+      "category": "Iphone",
       "id": 1
+    },
+    {
+      "user_id": 2,
+      "data": "2023.9.6.8.55",
+      "wallet": "VISA",
+      "price": "12",
+      "category": "awdas",
+      "id": 2
+    },
+    {
+      "user_id": 2,
+      "data": "2023.9.6.8.58",
+      "wallet": "VISA",
+      "price": "12",
+      "category": "wdas",
+      "id": 3
+    },
+    {
+      "user_id": 2,
+      "data": "2023.9.6.8.58",
+      "wallet": "adawd",
+      "price": "1215",
+      "category": "adwa",
+      "id": 4
     }
   ]
 }
