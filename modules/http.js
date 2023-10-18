@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:7000"
+const BASE_URL = import.meta.env.VITE_BASE_URL
 
 
 export const getData = async (url) => {
@@ -43,9 +43,9 @@ export const patchData = async () => {
 
 
 export const getSymbols = async () => {
-    const res = await fetch('https://api.apilayer.com/fixer/symbols', {
+    const res = await fetch(import.meta.env.VITE_FIXER_IO, {
         headers: {
-            apikey: "TGCgzIx4lrYPFz1bvQS4bX3QiLBodyDo"
+            apikey: import.meta.env.VITE_FIXER_API_KEY
         }
     })
 
