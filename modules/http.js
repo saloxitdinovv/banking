@@ -1,12 +1,16 @@
+import axios from 'axios'
+
 const BASE_URL = import.meta.env.VITE_BASE_URL
 
 
 export const getData = async (url) => {
-    const res = await fetch(BASE_URL + url)
+    try {
+        const res = await axios.get(BASE_URL + url)
 
-    const data = await res.json()
-
-    return data
+        return res.data
+    } catch(error) {
+        alert('что то пошло не так перезагрузите страницу')
+    }
 }
 
 export const postData = async (url, body) => {
@@ -22,9 +26,7 @@ export const postData = async (url, body) => {
 }
 
 export const removeData = async (url, id) => {
-    const res = await fetch(`${BASE_URL}${url}/${id}`, {
-        method: 'delete'
-    })
+    const res = await axios.delete(`${BASE_URL}${url}/${id}`)
 
     return res
 }
