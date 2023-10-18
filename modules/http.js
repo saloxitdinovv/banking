@@ -29,7 +29,7 @@ export const removeData = async (url, id) => {
     return res
 }
 
-export const patchData = async () => {
+export const patchData = async (url, body) => {
     const res = await fetch(BASE_URL + url, {
         method: 'patch',
         body: JSON.stringify(body),
