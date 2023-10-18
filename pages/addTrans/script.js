@@ -1,3 +1,4 @@
+import { postData } from "../../modules/http"
 import { user } from "/modules/user_data"
 let form = document.forms.addTrans
 let inps = form.querySelectorAll('input')
@@ -33,16 +34,10 @@ form.onsubmit = (e) => {
     });
 
     if(error){
-        fetch('http://localhost:7000/transactions', {
-            method: "post", 
-            body: JSON.stringify(transactions),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        .then(res => console.log(res))
+        postData("/transactions", transactions)
+            .then(res => console.log(res))
         
-        // location.assign('/pages/transictions/index.html')
+        location.assign('/pages/transictions/index.html')
         fetch('http://localhost:7000/cards')
         .then(res => res)
         .then(res => {

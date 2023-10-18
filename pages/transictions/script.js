@@ -1,5 +1,7 @@
 import { transactions } from "../../modules/transictions";
 import { user } from "/modules/user_data"
+import { getData } from "../../modules/http"
+let tbody = document.querySelector('tbody')
 
 let btn = document.querySelector('button')
 
@@ -8,6 +10,5 @@ btn.onclick = () => {
 }
 
 
-fetch('http://localhost:7000/transactions?user_id=' + user.id)
-    .then(res => res.json())
-    .then(res => transactions(res))
+getData('/transactions?user_id=' + user.id)
+    .then(res => transactions(res, tbody))

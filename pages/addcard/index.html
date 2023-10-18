@@ -11,10 +11,12 @@
 <body>
     <form name="addWallet">
         <h1>Добавить карту</h1>
-        <input type="text" maxlength="20" name="name" class="currency name" placeholder="Имя">
-        <input type="text" maxlength="10" name="currency" class="currency" placeholder="Валюта">
+        <input type="text" maxlength="20" name="name" class="card_name" placeholder="Имя">
+        <select name="currency" id="currency">
+        </select>
+        <!-- <input type="text" maxlength="10" name="currency" class="currency" placeholder="Валюта"> -->
         <input type="text" maxlength="10" name="balance" class="currency" placeholder="Balance">
-        <button class="continue">Добавить</button>
+        <button class="continue add">Добавить</button>
 
         <a href="/pages/cards/">Назад</a>
     </form>

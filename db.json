@@ -6,77 +6,25 @@
       "surname": "Sharifkulov",
       "password": "2232",
       "id": 1
-    },
-    {
-      "email": "farrux777@gmail.com",
-      "name": "Farrux",
-      "surname": "Isroilov",
-      "password": "2232",
-      "id": 2
     }
   ],
   "cards": [
     {
-      "user_id": 2,
-      "name": "HUMO",
+      "user_id": 1,
+      "name": "Мой кошелёк",
       "currency": "BTC",
       "balance": "1000000",
       "id": 7
-    },
-    {
-      "user_id": 2,
-      "name": "UZCARD",
-      "currency": "UZS",
-      "balance": "1000000",
-      "id": 8
-    },
-    {
-      "user_id": 2,
-      "name": "VISA",
-      "currency": "USD",
-      "balance": "1000000",
-      "id": 9
-    },
-    {
-      "user_id": 2,
-      "name": "QIWI",
-      "currency": "USD",
-      "balance": "1000000",
-      "id": 10
     }
   ],
   "transactions": [
     {
-      "user_id": 2,
-      "data": "2023.9.6.8.51",
-      "wallet": "VISA",
-      "price": "1120",
-      "category": "Iphone",
+      "user_id": 1,
+      "data": "2023.9.2.8.37",
+      "wallet": "Мой кошелёк",
+      "price": "400",
+      "category": "avtomobile",
       "id": 1
-    },
-    {
-      "user_id": 2,
-      "data": "2023.9.6.8.55",
-      "wallet": "VISA",
-      "price": "12",
-      "category": "awdas",
-      "id": 2
-    },
-    {
-      "user_id": 2,
-      "data": "2023.9.6.8.58",
-      "wallet": "VISA",
-      "price": "12",
-      "category": "wdas",
-      "id": 3
-    },
-    {
-      "user_id": 2,
-      "data": "2023.9.6.8.58",
-      "wallet": "adawd",
-      "price": "1215",
-      "category": "adwa",
-      "id": 4
     }
   ]
 }

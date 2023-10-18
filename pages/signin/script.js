@@ -1,3 +1,7 @@
+import {
+    getData
+} from "../../modules/http"
+
 let form = document.forms.signin
 let inputs = form.querySelectorAll('input')
 let inputEmail = document.querySelector('.email')
@@ -17,22 +21,22 @@ form.onsubmit = (e) => {
         }
     })
 
-    fetch('http://localhost:7000/users?email=' + inputEmail.value)
-        .then(res => res.json())
+
+    if(!error) return
+
+    getData('/users?email=' + inputEmail.value)
         .then(res => {
-            
+            if (res.length === 0) return
+
             let [user] = res
 
-            if(user) {
-                if(user.password === inputPassword.value) {
-                    localStorage.setItem('user', JSON.stringify(user))
-                    location.assign('/')
-                } else {
-                    alert('wrong password')
-                }
+            if (+user.password !== +inputPassword.value) {
+                alert('Wrong password')
+                return
             }
+
+            delete user.password
+            localStorage.setItem('user', JSON.stringify(user))
+            location.assign('/')
         })
-
-
 }
-

@@ -18,6 +18,10 @@ export function wallets(arr){
         currency.innerHTML = item.currency
         currency.classList.add('currency')
         wallet.append(currency)
+
+        wallet.onclick = () => {
+            location.assign('/pages/cardID/index.html')
+        }
     }
     
     wallets.classList.add('wallets')
@@ -26,4 +30,14 @@ export function wallets(arr){
     
     wallets_box.prepend(myWallet, wallets)
 
+}
+
+
+export function createCurrs(obj, place) {
+
+    for(let key in obj ) {
+        let opt = new Option(key, key)
+
+        place.append(opt)
+    }
 }
