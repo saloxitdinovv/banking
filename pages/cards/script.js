@@ -11,4 +11,7 @@ btn.onclick = () => {
 
 fetch('http://localhost:7000/cards?user_id=' + user.id)
     .then(res => res.json())
-    .then(res => wallets(res))
+    .then(res => {
+        let box = document.querySelector('.wallets_box')
+        wallets(res, box)
+    })

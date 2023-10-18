@@ -100,9 +100,18 @@ header {
 		width: 170px;
 	}
 
+	.balance{
+		position: absolute;
+		translate: 50% 460%;
+		color: white;
+		font-size: 16px;
+	}
+
 	.wallets {
 		display: flex;
-		justify-content: space-between;
+		width: 100%;
+		flex-wrap: wrap;
+		gap: 10px;
 
 		.wallet_1 {
 			width: 282px;
@@ -112,40 +121,7 @@ header {
 			justify-content: space-between;
 			padding: 20px 215px 20px 25px;
 			border-radius: 15px;
-			background: linear-gradient(84deg, #d7816a 2.27%, #bd4f6c 92.26%);
-		}
-
-		.wallet_2 {
-			width: 282px;
-			height: 160px;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			padding: 20px 215px 20px 25px;
-			border-radius: 15px;
-			background: linear-gradient(84deg, #5f0a87 2.27%, #a4508b 92.26%);
-		}
-
-		.wallet_3 {
-			width: 282px;
-			height: 160px;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			padding: 20px 215px 20px 25px;
-			border-radius: 15px;
-			background: linear-gradient(84deg, #20bf55 2.27%, #01baef 92.26%);
-		}
-
-		.wallet_4 {
-			width: 282px;
-			height: 160px;
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			padding: 20px 215px 20px 25px;
-			border-radius: 15px;
-			background: linear-gradient(84deg, #380036 2.27%, #0cbaba 92.26%);
+			background: linear-gradient(84deg, #6e6ad7 2.27%, #5444bb 92.26%);
 		}
 	}
 
@@ -238,4 +214,8 @@ td {
 	font-style: normal;
 	font-weight: 500;
 	line-height: normal;
+}
+.btnsik{
+	font-size: 100px;
+	cursor: pointer;
 }

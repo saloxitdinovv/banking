@@ -212,7 +212,14 @@ td {
 }
 
 tr {
+	display: flex;
+	gap: 30px;
 	border-bottom: 1px solid #b9c0d1;
+}
+
+.divMain{
+	display: flex;
+	flex-direction: column;
 }
 
 tr:first-child {
@@ -231,6 +238,11 @@ th {
 	line-height: normal;
 	text-align: start;
 }
+.btnsik{
+	font-size: 100px;
+	cursor: pointer;
+}
+
 
 td {
 	color: #000;

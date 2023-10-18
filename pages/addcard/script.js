@@ -38,8 +38,6 @@ form.onsubmit = (e) => {
                 "Content-Type": "application/json"
             }
         })
-        .then(res => console.log(res))
-        
-        // location.assign('/pages/cards/')
+        location.assign('/pages/cards/')
     }
 }

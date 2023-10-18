@@ -1,4 +1,4 @@
-export function transactions(){
+export function transactions(arr, place){
     let lastTransactions = document.createElement('h1')
     lastTransactions.innerHTML = 'Последние транзакции'
     
@@ -6,29 +6,47 @@ export function transactions(){
     
     let th = document.createElement('tr');
     let thText = ['ID', 'Отправлено с кошелька', 'Категория', 'Сумма транзации', 'Когда'];
-    
+
+
     thText.forEach(text => {
         let header = document.createElement('th');
         header.innerHTML = text;
         th.append(header);
     });
+    if(arr.length === 0){
+        let hs1 = document.createElement('h2')
+        hs1.innerHTML = 'У вас нет транзакций :/'
+        let btnsik = document.createElement('div')
+        btnsik.innerHTML = '+'
+        table.style.display = 'block'
+        btnsik.onclick = () => {
+            location.assign('/pages/addTrans/')
+        }
+        btnsik.classList.add('btnsik')
+        table.prepend(hs1, btnsik) 
+    } else {
+
+
+        for (let item of arr) {
+            let tr = document.createElement('tr')   
+            let aydi = document.createElement('td')
+            let wallet = document.createElement('td')
+            let category = document.createElement('td')
+            let summa = document.createElement('td')
+            let time = document.createElement('td')
+
+            aydi.innerHTML = item.id
+            wallet.innerHTML = item.card
+            category.innerHTML = item.category
+            summa.innerHTML = item.price
+            time.innerHTML = item.time
     
-    table.append(th);
-    
-    for (let i = 0; i < 7; i++) {
-        let tr = document.createElement('tr');
-        let tdText = ['1232312', 'VISA', 'Автомобиль', '414,000,000', '4 дня назад'];
-    
-        tdText.forEach(text => {
-            let td = document.createElement('td');
-            td.innerHTML = text;
-            tr.append(td);
-        });
-    
-        table.append(tr);
+            tr.append(aydi, wallet,category, summa, time)
+            table.append(th, tr)
+        }
+        
     }
     
-    let transactions = document.querySelector('.transactions');
-    transactions.prepend(lastTransactions, table);
+    place.prepend(lastTransactions, table);
 }
 
