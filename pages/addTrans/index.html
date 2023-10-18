@@ -10,13 +10,14 @@
 <body>
     <form name="addTrans">
         <h1>Добавить транзикцию</h1>
-        <input type="text" maxlength="20" name="wallet" class="wallet" placeholder="Из кошелька">
+        <select name="select" id="selectId" class="selectId"></select>
+        <!-- <input type="text" maxlength="20" name="wallet" class="wallet" placeholder="Из кошелька"> -->
         <input type="number" maxlength="15" name="price" class="price" placeholder="Сумма">
         <input type="text" maxlength="15" name="category" class="category" placeholder="Категория">
         <button class="continue">Добавить</button>
 
         <a href="/pages/transictions/">Назад</a>
     </form>
-    <script src="./script.js"></script>
+    <script type="module" src="./script.js"></script>
 </body>
 </html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD PAGE</title>
+    <link rel="stylesheet" href="styles.scss">
+</head>
+<body>    
+    <header>
+		<div class="box">
+			
+		</div>
+	</header>
+
+
+    <div class="card_container">
+        <div class="card_info">
+            <h1>Card Name: <span>Visa</span></h1>
+            <h1>Balance: <span>1000$</span></h1>
+
+            <div class="convertation">
+                <span>
+                    <h2>Convert from</h2>
+                    <select name="convertor">
+                        <option value="1">UZS</option>
+                    </select>
+                </span>
+                <span>
+                    <h2>To</h2>
+                    <select name="convertor">
+                        <option value="1">USD</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+        <div class="card_box">
+            <div class="card">
+                <h1>VISA</h1>
+
+                <div class="info_box">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAclBMVEX///8AAAA3Nzd7e3s7Oztzc3Nvb293d3ff39+Li4tfX1/z8/Orq6uvr6+Xl5cLCwtTU1Pn5+dnZ2e/v78rKyuRkZGCgoLv7+8XFxdHR0cRERHLy8uenp5CQkIiIiK1tbXa2trFxcUcHBwvLy/R0dFZWVk0YRn9AAAD1klEQVR4nO2cbXOqMBBGBZUKWKgo4kstUvX//8UOGwL23laSTSJ05jmfUDGbE5OgjLuTCQAAAAAAAAAAAAAAAAAAAAAAAAAAAIBDFUb7mf90ZvsorOxZnIODNyCH4GxFYxUNaSGIVuYey/tPY3eKgvlTCKLT7i7w4dXUY9o1NkvO5uOiwzmZddG3Zm3Nu0/3bKVzmlxvbQdeTNoJZSv+1VbXdDn6sg8Jv5HKymiYImdFemQ3sWmaeJdPFGW+ffmZKb3+y4v6TPOykFHfm25cuB5J04DcMZanBztkWp+xeHCCPqelDNw8wZ1cn9/eXn48jOpAxPM2pYidi4cfPI9SvDsSj4KemE5EPC8Q0ZvNa80SEVf0z7g+jvd9ER2JeHvqSyGujhlLRMwsMU/fegO6EvFu1AGx4Flza0Vv3dBx+CiSYxEvpC6IFRozRCp6J630czqkSLqomxbrnXMpobWe0mZ+exjItYjYbgoaTM5qp82bltpKJZpDEY++xNNFjPMlmERofiqsELcied321khk3Y7FkCI0L0ojEfpQlX7ouhTZtW2zRertLlYK5lKk6wZbpD5QWutuRWhimIikEIEIRCDy90QmsRLqIp/BVJPYjog6SiIfRX9DPzE6kZDRmZrRiXBv6piLWF4jg4nY3rVIJMl0sLPYnYj035a5Z5zXEYhABCIQgQhEIAIRiEAEIhCByJ8V2ajgj19EA3WRY6nDOO80DndfSx2IqGAsEq9VqMYv4mT7nWr9R74YrwguiBCBCEQgAhGIQAQiEIEIRCACkeFEikiFTE8kUWpUYuc3uwbjvouiAURUgIgUiUMVcj2RUqlRCf4KKEWcJMIMIuIiNYkhYp6a5CJZTF/EQrKYi/Q9fREL6XsuEir1RSwkVO6Vu+dSxCzF1VnSsbaISDqmQ07ScdVFtZsGritimgYuhkDk9FtNzNcVoRVikJjflEoQNVFslkrQFBGlEkRpE14ZDlG8YkerxGbxCj2RN+pLIa5lvOIV5f2I3JVDeqpIU+ynOZ1XTqSZls0cnaw3v4dzJXJpet6sUWaBl7bkTlv55tH8si+S7ttaP80z7z/1UoX/iiDF62T7S6ogFfIqVJIKaQtd9py0TdbtDiUHlF0EaXKUgzNnN2FOLIv9pAY1vnJpcuHXtjKkunybklxe2hl7G6Tm2bVbS1Ozlrbd4vPzJ7tcc7+Lzs0nbXm9/1l1mN2y4ClkN/9bXcXSfFxWWf9O6ZqMmaf8D4v5rj+WO3bzhRUN4phn+9Ps6Zzesnyw/RIAAAAAAAAAAAAAAAAAAAAAAAAAAIA/zheWu4aFhMb/OwAAAABJRU5ErkJggg==" alt="">
+                    <h2>7777 7777 7777 7777</h2>
+
+                    <h3></h3>
+                </div>
+            </div>
+            <div class="card_image"></div>
+        </div>
+    </div>
+
+    <script type="module" src="../../modules/header.js"></script>
+    <script type="module" src="index.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".card_box"), {
+            max: 10,
+            speed: 100
+        });
+    </script>
+</body>
+</html>

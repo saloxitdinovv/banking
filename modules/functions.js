@@ -3,12 +3,12 @@ export function wallets(arr){
     let myWallet = document.createElement('h1')
     
     let wallets = document.createElement('div')
-    console.log(arr);
 
     for (let item of arr) {
         let wallet = document.createElement('div')
         wallets.append(wallet)
-        wallet.classList.add(`wallet_${1}`)
+        wallet.classList.add(`wallet_${item.id}`)
+        wallet.classList.add('wallet')
     
         let walletName = document.createElement('h2')
         walletName.innerHTML = item.name
@@ -27,4 +27,14 @@ export function wallets(arr){
     
     wallets_box.prepend(myWallet, wallets)
 
+}
+
+
+export function createCurrs(obj, place) {
+
+    for(let key in obj ) {
+        let opt = new Option(key, key)
+
+        place.append(opt)
+    }
 }

@@ -14,5 +14,8 @@
     "sass": "^1.69.0",
     "scss": "^0.2.4",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "vanilla-tilt": "^1.8.1"
   }
 }

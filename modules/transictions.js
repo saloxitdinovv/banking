@@ -1,34 +1,28 @@
-export function transactions(){
-    let lastTransactions = document.createElement('h1')
-    lastTransactions.innerHTML = 'Последние транзакции'
-    
-    let table = document.createElement('table');
-    
-    let th = document.createElement('tr');
-    let thText = ['ID', 'Отправлено с кошелька', 'Категория', 'Сумма транзации', 'Когда'];
-    
-    thText.forEach(text => {
-        let header = document.createElement('th');
-        header.innerHTML = text;
-        th.append(header);
-    });
-    
-    table.append(th);
-    
-    for (let i = 0; i < 7; i++) {
-        let tr = document.createElement('tr');
-        let tdText = ['1232312', 'VISA', 'Автомобиль', '414,000,000', '4 дня назад'];
-    
-        tdText.forEach(text => {
-            let td = document.createElement('td');
-            td.innerHTML = text;
-            tr.append(td);
-        });
-    
-        table.append(tr);
+export function transactions(arr, place){
+    place.innerHTML = ""
+
+    if(arr.length === 0) {
+        place.innerHTML = "НЕТ ТРАНЗАКЦИЙ"
+        return
     }
     
-    let transactions = document.querySelector('.transactions');
-    transactions.prepend(lastTransactions, table);
+    for(let item of arr) {
+        let tr = document.createElement('tr')
+        let id = document.createElement('td')
+        let card = document.createElement('td')
+        let category = document.createElement('td')
+        let total = document.createElement('td')
+        let date = document.createElement('td')
+
+        id.innerHTML = item.id
+        card.innerHTML = item?.card?.name
+        category.innerHTML = item.category
+        total.innerHTML = item.total
+        date.innerHTML = item.date
+
+
+        tr.append(id, card, category, total, date)
+        place.append(tr)
+    }
 }
 
