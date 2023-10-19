@@ -1,12 +1,16 @@
-const BASE_URL = "http://localhost:7000"
+import axios from 'axios'
+
+const BASE_URL = import.meta.env.VITE_BASE_URL
 
 
 export const getData = async (url) => {
-    const res = await fetch(BASE_URL + url)
+    try {
+        const res = await axios.get(BASE_URL + url)
 
-    const data = await res.json()
-
-    return data
+        return res.data
+    } catch(error) {
+        alert('что то пошло не так перезагрузите страницу')
+    }
 }
 
 export const postData = async (url, body) => {
@@ -22,14 +26,12 @@ export const postData = async (url, body) => {
 }
 
 export const removeData = async (url, id) => {
-    const res = await fetch(`${BASE_URL}${url}/${id}`, {
-        method: 'delete'
-    })
+    const res = await axios.delete(`${BASE_URL}${url}/${id}`)
 
     return res
 }
 
-export const patchData = async () => {
+export const patchData = async (url, body) => {
     const res = await fetch(BASE_URL + url, {
         method: 'patch',
         body: JSON.stringify(body),
@@ -43,9 +45,9 @@ export const patchData = async () => {
 
 
 export const getSymbols = async () => {
-    const res = await fetch('https://api.apilayer.com/fixer/symbols', {
+    const res = await fetch(import.meta.env.VITE_FIXER_IO, {
         headers: {
-            apikey: "TGCgzIx4lrYPFz1bvQS4bX3QiLBodyDo"
+            apikey: import.meta.env.VITE_FIXER_API_KEY
         }
     })
 

@@ -1,8 +1,5 @@
-import { postData } from "../../modules/http"
-import { user } from "/modules/user_data"
 let form = document.forms.addTrans
 let inps = form.querySelectorAll('input')
-let name = document.querySelector('.name')
 
 form.onsubmit = (e) => {
     e.preventDefault()
@@ -22,7 +19,20 @@ form.onsubmit = (e) => {
 
     console.log(transactions);
 
-    let error = false
+    let date = new Date()
+    let trans = {
+        user_id: user?.id,
+        date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+    }
+
+    fm.forEach((value, key) => trans[key] = value)
+
+    let findedCard = cards.find(item => +item.id === +trans.card)
+
+    delete findedCard.user_id
+    delete findedCard.currency
+
+    trans.card = findedCard
 
     inps.forEach(inp => {
         if (inp.value.length === 0) {
@@ -34,17 +44,7 @@ form.onsubmit = (e) => {
     });
 
     if(error){
-        postData("/transactions", transactions)
-            .then(res => console.log(res))
-        
-        location.assign('/pages/transictions/index.html')
-        fetch('http://localhost:7000/cards')
-        .then(res => res)
-        .then(res => {
-            if(res.wallet === name || res.user_id === user.id){
-                transactions.push(JSON.parse(res))
-            }
-            console.log(JSON.parse(res))
-        })
+        alert('Типа добавил')
+        location.assign('/pages/transictions/')
     }
 }

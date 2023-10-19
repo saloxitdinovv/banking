@@ -11,20 +11,35 @@
   "cards": [
     {
       "user_id": 1,
-      "name": "Мой кошелёк",
-      "currency": "BTC",
-      "balance": "1000000",
-      "id": 7
+      "name": "Visa",
+      "currency": "USD",
+      "balance": 400,
+      "id": 1
     }
   ],
   "transactions": [
     {
       "user_id": 1,
-      "data": "2023.9.2.8.37",
-      "wallet": "Мой кошелёк",
-      "price": "400",
-      "category": "avtomobile",
-      "id": 1
+      "card": {
+        "id": 1,
+        "name": "FARRUX",
+        "balance": 30000
+      },
+      "total": 1000,
+      "category": "food",
+      "date": "2023-10-16"
+    },
+    {
+      "user_id": 1,
+      "date": "2023-10-18",
+      "card": {
+        "name": "Visa",
+        "balance": "1000",
+        "id": 1
+      },
+      "total": "600",
+      "category": "food",
+      "id": 2
     }
   ]
 }
