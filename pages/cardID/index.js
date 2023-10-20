@@ -1,9 +1,23 @@
-let id = location.search.split('=').at(-1)
-let h1 = document.querySelector('h1')
+import { user } from "../../modules/user_data"
+import { getData } from "../../modules/http"
+import { transactions } from "../../modules/transactions";
 
-fetch('http://localhost:7000/cards/' + id)
-    .then(res => res.json())
+let userName = document.querySelector('h3')
+let tbody = document.querySelector('tbody')
+let card = null
+
+
+let id = location.search.split('=').at(-1)
+
+
+getData('/cards/' + id)
     .then(res => {
-        console.log(res);
-        h1.innerHTML = res.name
+        userName.innerHTML = res?.name
+        card = res
+        getData('/transactions?card_id=' + id)
+            .then(res => transactions(res, tbody))
     })
+
+
+
+// userName.innerHTML = user?.name

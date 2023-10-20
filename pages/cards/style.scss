@@ -101,8 +101,9 @@ header {
 	}
 
 	.wallets {
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 25px;
 
 		.wallet_1 {
 			width: 282px;

@@ -1,11 +1,6 @@
-import {
-    user
-} from "/modules/user_data"
-import {
-    getData,
-    patchData
-} from "/modules/http"
-import { postData } from "../../modules/http"
+import { user } from "/modules/user_data"
+import { getData, patchData } from "/modules/http"
+import { postData } from "/modules/http"
 
 let form = document.forms.addTrans
 let inps = form.querySelectorAll('input')
@@ -36,9 +31,7 @@ form.onsubmit = (e) => {
     fm.forEach((value, key) => trans[key] = value)
 
     let findedCard = cards.find(item => +item.id === +trans.card)
-
-    delete findedCard.user_id
-    delete findedCard.currency
+    let saveCard = JSON.stringify(findedCard)
 
     trans.card = findedCard
 
@@ -48,17 +41,18 @@ form.onsubmit = (e) => {
         alert('Меньше 10usd снять нельзя!')
     } else {
         patchData('/cards/' + findedCard.id, {
+            ...JSON.parse(saveCard),
             balance: findedCard.balance - trans.total
         }).then(res => {
             if(res.status === 200 || res.status === 201) {
-                postData('/transactions', trans)
+                postData('/transactions', {trans, card_id: findedCard.id})
                     .then(res => {
                         if(res.status === 200 || res.status === 201) {
                             alert('Транзакция прошла успешно')
 
                             setTimeout(() => {
                                 location.assign('/pages/transactions/')
-                            }, 1500);
+                            }, 100);
                         }
                     })
             }

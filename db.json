@@ -1,23 +1,87 @@
 {
   "users": [
     {
-      "email": "dsarifkulo021@gmail.com",
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "password": "2232",
+      "email": "saloxitdinovv@gmail.com",
+      "name": "Saloxitdinov",
+      "surname": "12",
+      "password": "1212",
       "id": 1
+    },
+    {
+      "email": "farrux777@gmail.com",
+      "name": "Farrux",
+      "surname": "Isroilov",
+      "password": "777",
+      "id": 2
     }
   ],
   "cards": [
     {
-      "user_id": 1,
-      "name": "Visa",
-      "currency": "USD",
-      "balance": 400,
+      "user_id": 2,
+      "name": "Money",
+      "currency": "BTC",
+      "balance": 757,
       "id": 1
+    },
+    {
+      "user_id": 2,
+      "name": "Farrux",
+      "currency": "BTC",
+      "balance": 767,
+      "id": 2
     }
   ],
   "transactions": [
-
+    {
+      "trans": {
+        "user_id": 2,
+        "date": "2023-10-20",
+        "card": {
+          "user_id": 2,
+          "name": "Money",
+          "currency": "BTC",
+          "balance": "777",
+          "id": 1
+        },
+        "total": "10",
+        "category": "car"
+      },
+      "card_id": 1,
+      "id": 1
+    },
+    {
+      "trans": {
+        "user_id": 2,
+        "date": "2023-10-20",
+        "card": {
+          "user_id": 2,
+          "name": "Money",
+          "currency": "BTC",
+          "balance": 767,
+          "id": 1
+        },
+        "total": "10",
+        "category": "laptop"
+      },
+      "card_id": 1,
+      "id": 2
+    },
+    {
+      "trans": {
+        "user_id": 2,
+        "date": "2023-10-20",
+        "card": {
+          "user_id": 2,
+          "name": "Farrux",
+          "currency": "BTC",
+          "balance": "777",
+          "id": 2
+        },
+        "total": "10",
+        "category": "money"
+      },
+      "card_id": 2,
+      "id": 3
+    }
   ]
 }

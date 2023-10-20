@@ -1,6 +1,6 @@
 import { user } from "./modules/user_data"
 import { wallets } from "./modules/functions"
-import { transactions } from "./modules/transictions"
+import { transactions } from "./modules/transactions"
 import { getData } from "./modules/http"
 
 let userName = document.querySelector('.user_name')

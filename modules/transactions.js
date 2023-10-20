@@ -15,14 +15,13 @@ export function transactions(arr, place){
         let date = document.createElement('td')
 
         id.innerHTML = item.id
-        card.innerHTML = item?.wallet
-        category.innerHTML = item.category
-        total.innerHTML = item.price
-        date.innerHTML = item.data
+        card.innerHTML = item.trans.card.name
+        category.innerHTML = item.trans.category
+        total.innerHTML = item.trans.total
+        date.innerHTML = item.trans.date
 
 
         tr.append(id, card, category, total, date)
         place.append(tr)
     }
 }
-
