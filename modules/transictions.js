@@ -1,34 +1,28 @@
-export function transactions(id, name, cat, sum, time) {
-    let lastTransactions = document.createElement('h1')
-    lastTransactions.innerHTML = 'Последние транзакции'
+export function transactions(arr, place){
+    place.innerHTML = ""
 
-    let table = document.createElement('table');
+    if(arr.length === 0) {
+        place.innerHTML = "НЕТ ТРАНЗАКЦИЙ"
+        return
+    }
+    
+    for(let item of arr) {
+        let tr = document.createElement('tr')
+        let id = document.createElement('td')
+        let card = document.createElement('td')
+        let category = document.createElement('td')
+        let total = document.createElement('td')
+        let date = document.createElement('td')
 
-    let th = document.createElement('tr');
-    let thText = ['ID', 'Отправлено с кошелька', 'Категория', 'Сумма транзации', 'Когда'];
-
-    thText.forEach(text => {
-        let header = document.createElement('th');
-        header.innerHTML = text;
-        th.append(header);
-    });
-
-    table.append(th);
-
-
-    let tr = document.createElement('tr');
-    let tdText = [id, name, cat, sum, time];
-
-    tdText.forEach(text => {
-        let td = document.createElement('td');
-        td.innerHTML = text;
-        tr.append(td);
-    });
-
-    table.append(tr);
+        id.innerHTML = item.id
+        card.innerHTML = item?.card?.name
+        category.innerHTML = item.category
+        total.innerHTML = item.total
+        date.innerHTML = item.date
 
 
-    let transactions = document.querySelector('.transactions');
-    transactions.prepend(lastTransactions, table);
+        tr.append(id, card, category, total, date)
+        place.append(tr)
+    }
 }
 

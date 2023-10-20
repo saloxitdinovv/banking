@@ -1,21 +1,44 @@
-import { user } from "/modules/user_data"
+import {
+    createCurrs
+} from "../../modules/functions"
+import {
+    getSymbols, postData
+} from "../../modules/http"
+import {
+    user
+} from "/modules/user_data"
 
 let form = document.forms.addWallet
 let inps = form.querySelectorAll('input')
+let select = document.querySelector('#currency')
+let symbols = JSON.parse(localStorage.getItem('symbols') || "[]")
 
-console.log(user);
+if (symbols.length === 0) {
+    getSymbols()
+        .then(res => {
+            localStorage.setItem('symbols', JSON.stringify(res.symbols))
+            createCurrs(res.symbols, select)
+        })
+} else {
+    createCurrs(symbols, select)
+}
+
+
 
 form.onsubmit = (e) => {
     e.preventDefault()
-
+    let date = new Date()
     let card = {
+        date:`${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`,
         user_id: user?.id
+        
     }
 
     let fm = new FormData(form)
 
     fm.forEach((value, key) => {
         card[key] = value
+        
     })
 
     console.log(card);
@@ -30,16 +53,12 @@ form.onsubmit = (e) => {
         }
     });
 
-    if(error){
-        fetch('http://localhost:7000/cards', {
-            method: "post", 
-            body: JSON.stringify(card),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        .then(res => console.log(res))
-        
-        // location.assign('/pages/cards/')
+    if (error) {
+        postData('/cards',card)
+            .then(res => {
+                if(res.status === 200 || res.status === 201) {
+                    location.assign('/pages/cards/')
+                }
+            })
     }
 }

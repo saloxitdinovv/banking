@@ -14,5 +14,9 @@
     "sass": "^1.69.0",
     "scss": "^0.2.4",
     "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "axios": "^1.5.1",
+    "parallax-mouse": "^1.0.1"
   }
 }

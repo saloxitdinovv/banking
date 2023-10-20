@@ -1,80 +1,67 @@
-import { user } from "/modules/user_data.js";
-import { transactions } from "/modules/transictions.js";
+import {
+    user
+} from "/modules/user_data"
+import {
+    getData,
+    patchData
+} from "/modules/http"
+import { postData } from "../../modules/http"
+
 let form = document.forms.addTrans
 let inps = form.querySelectorAll('input')
-let select = document.querySelector("select")
+let select = form.querySelector('select')
+let cards = []
 
-fetch('http://localhost:7000/cards')
-    .then(res => res.json())
-    .then(res => add_trans(res))
-
-    function add_trans(data) {
-        data.forEach(element => {
-            if(element.user_id===user.id){
-                select.innerHTML += `<option>${element.name}</option>`
-            }
-        });
-    }
-form.onsubmit = (e) => {
-    e.preventDefault()
-
-    let error = false
-
-    inps.forEach(inp => {
-        if (inp.value.length === 0) {
-            inp.classList.add("error");
-            error = false
-        } else {
-            error = true
-            inp.classList.remove("error");
+getData('/cards?user_id=' + user?.id)
+    .then(res => {
+        cards = res
+        for (let card of res) {
+            let opt = new Option(card.name, card.id)
+            select.append(opt)
         }
-    });
+    })
 
-    if (error) {
-        alert('Типа добавил')
-        location.assign('/pages/transictions/')
-    }
-}
 
-let info
 form.onsubmit = (e) => {
     e.preventDefault()
 
-    let transiction = {
-        user_id: user?.id
+    let date = new Date()
+    let trans = {
+        user_id: user?.id,
+        date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
     }
 
     let fm = new FormData(form)
 
-    fm.forEach((value, key) => {
-        transiction[key] = value
-    })
-    fetch('http://localhost:7000/cards')
-        .then(res => res.json())
-        .then(res => {
-            res.forEach(elem => {
-                info = [elem.id,transiction.wallet,transiction.category,transiction.price,"недавно"]
-                localStorage.setItem("info",JSON.stringify(info))
-                if (elem.name ===transiction.wallet ) {
-                    feth(elem)
-                }
-            });
-        })
+    fm.forEach((value, key) => trans[key] = value)
 
-    console.log(transiction.wallet);
-    function feth(element) {
-        fetch('http://localhost:7000/cards/'+element.id,{
-            method: "Put",
-            headers:{
-                "Content-type":"application/json"
-            },
-            body: JSON.stringify({
-                "user_id": element.user_id,
-                "name": element.name,
-                "currency": element.currency,
-                "balance": element.balance-transiction.price,
-                "id": element.id
-            })
+    let findedCard = cards.find(item => +item.id === +trans.card)
+
+    delete findedCard.user_id
+    delete findedCard.currency
+
+    trans.card = findedCard
+
+    if (+trans.total > +findedCard.balance) {
+        alert('Недостаточно средств!')
+    } else if (trans.total < 10) {
+        alert('Меньше 10usd снять нельзя!')
+    } else {
+        patchData('/cards/' + findedCard.id, {
+            balance: findedCard.balance - trans.total
+        }).then(res => {
+            if(res.status === 200 || res.status === 201) {
+                postData('/transactions', trans)
+                    .then(res => {
+                        if(res.status === 200 || res.status === 201) {
+                            alert('Транзакция прошла успешно')
+
+                            setTimeout(() => {
+                                location.assign('/pages/transactions/')
+                            }, 1500);
+                        }
+                    })
+            }
         })
     }
 }

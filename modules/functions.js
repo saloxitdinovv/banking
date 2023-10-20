@@ -1,4 +1,5 @@
 export function wallets(arr){
+    
     let wallets_box = document.querySelector('.wallets_box')
     let myWallet = document.createElement('h1')
     
@@ -6,6 +7,7 @@ export function wallets(arr){
     console.log(arr);
 
     for (let item of arr) {
+        
         let wallet = document.createElement('div')
         wallets.append(wallet)
         wallet.classList.add(`wallet_${1}`)
@@ -19,6 +21,10 @@ export function wallets(arr){
         currency.innerHTML = item.currency
         currency.classList.add('currency')
         wallet.append(currency)
+        wallet.onclick =()=>{
+            localStorage.setItem("card",JSON.stringify(item))
+            location.assign("/pages/card_window/")
+        }
     }
     
     wallets.classList.add('wallets')
@@ -27,4 +33,14 @@ export function wallets(arr){
     
     wallets_box.prepend(myWallet, wallets)
 
+}
+
+
+export function createCurrs(obj, place) {
+
+    for(let key in obj ) {
+        let opt = new Option(key, key)
+
+        place.append(opt)
+    }
 }

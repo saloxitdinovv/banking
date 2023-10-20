@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,15 +8,19 @@
     <link rel="stylesheet" href="style.scss">
     <title>Document</title>
 </head>
+
 <body>
     <form name="addTrans">
         <h1>Добавить транзикцию</h1>
-        <select type="text" name="wallet" class="wallet"></select>
-        <input type="number" maxlength="15" name="price" class="price" placeholder="Сумма">
+        <select name="card"></select>
+        <!-- <input type="text" maxlength="20" name="wallet" class="wallet" placeholder="Из кошелька"> -->
+        <input type="number" maxlength="15" name="total" class="price" placeholder="Сумма">
         <input type="text" maxlength="15" name="category" class="category" placeholder="Категория">
         <button class="continue">Добавить</button>
+
         <a href="/pages/transictions/">Назад</a>
     </form>
     <script type="module" src="./script.js"></script>
 </body>
+
 </html>

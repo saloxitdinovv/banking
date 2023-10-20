@@ -239,3 +239,33 @@ td {
 	font-weight: 500;
 	line-height: normal;
 }
+.info{
+	width: 300px;
+	height: 210px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: linear-gradient(184deg, #92d76a 2.27%, #177400 92.26%);
+	padding: 20px;
+	border-radius: 20px;
+	color: white;
+}
+.card{
+	width: 300px;
+	height: 170px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: linear-gradient(184deg, #818181 2.27%, #000000 92.26%);
+	padding: 20px;
+	border-radius: 20px;
+	color: white;
+}
+.item{
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+}
+.box{
+	margin-top: 20px;
+}
