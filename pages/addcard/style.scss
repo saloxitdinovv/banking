@@ -41,6 +41,24 @@ form input, form select {
     line-height: normal;
 }
 
+form button {
+    width: 440px;
+    margin: 0 auto;
+    padding: 17px 167px;
+    height: 50px;
+    border-radius: 10px;
+    background: #0047FF;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
 form a {
     color: #0047FF;
     font-size: 18px;
@@ -49,21 +67,7 @@ form a {
     line-height: normal;
     text-decoration: none;
 }
-.add{
-	height: 55px;
-	width: 500px;
-	padding: 5px;
-	border-radius: 10px;
-	background: #0047FF;
-	border: none;
-	margin-top: 25px;
-	text-decoration: none;
-	color: white;
-	font-size: 18px;
-	font-weight: 600;
-	width: 100%;
-	height: 100%;
-}
+
 .error {
     border: 2px solid #ff0202;
     color: red;

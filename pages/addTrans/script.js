@@ -1,29 +1,37 @@
+import {
+    user
+} from "/modules/user_data"
+import {
+    getData,
+    patchData
+} from "/modules/http"
+import { postData } from "../../modules/http"
+
 let form = document.forms.addTrans
 let inps = form.querySelectorAll('input')
+let select = form.querySelector('select')
+let cards = []
+
+getData('/cards?user_id=' + user?.id)
+    .then(res => {
+        cards = res
+        for (let card of res) {
+            let opt = new Option(card.name, card.id)
+            select.append(opt)
+        }
+    })
+
 
 form.onsubmit = (e) => {
     e.preventDefault()
-
-    let today = new Date()
-
-    let transactions = {
-        user_id: user?.id,
-        data: `${today.getFullYear()}.${today.getMonth()}.${today.getDay()}.${today.getHours()}.${today.getMinutes()}`
-    }
-
-    let fm = new FormData(form)
-
-    fm.forEach((value, key) => {
-        transactions[key] = value
-    })
-
-    console.log(transactions);
 
     let date = new Date()
     let trans = {
         user_id: user?.id,
         date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
     }
+
+    let fm = new FormData(form)
 
     fm.forEach((value, key) => trans[key] = value)
 
@@ -34,17 +42,26 @@ form.onsubmit = (e) => {
 
     trans.card = findedCard
 
-    inps.forEach(inp => {
-        if (inp.value.length === 0) {
-            inp.classList.add("error");
-        } else {
-            error = true
-            inp.classList.remove("error");
-        }
-    });
+    if (+trans.total > +findedCard.balance) {
+        alert('Недостаточно средств!')
+    } else if (trans.total < 10) {
+        alert('Меньше 10usd снять нельзя!')
+    } else {
+        patchData('/cards/' + findedCard.id, {
+            balance: findedCard.balance - trans.total
+        }).then(res => {
+            if(res.status === 200 || res.status === 201) {
+                postData('/transactions', trans)
+                    .then(res => {
+                        if(res.status === 200 || res.status === 201) {
+                            alert('Транзакция прошла успешно')
 
-    if(error){
-        alert('Типа добавил')
-        location.assign('/pages/transictions/')
+                            setTimeout(() => {
+                                location.assign('/pages/transactions/')
+                            }, 1500);
+                        }
+                    })
+            }
+        })
     }
 }
