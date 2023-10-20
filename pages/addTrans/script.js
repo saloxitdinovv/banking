@@ -1,16 +1,5 @@
-import { postData } from "../../modules/http"
-import { getData } from "../../modules/http"
-import { user } from "/modules/user_data"
-
 let form = document.forms.addTrans
 let inps = form.querySelectorAll('input')
-
-const today = new Date();
-const year = today.getFullYear();
-const month = String(today.getMonth() + 1).padStart(2, '0'); // Месяц начинается с 0
-const day = String(today.getDate()).padStart(2, '0');
-
-const formattedDate = `${year}-${month}-${day}`;
 
 form.onsubmit = (e) => {
     e.preventDefault()
@@ -27,7 +16,22 @@ form.onsubmit = (e) => {
         date: formattedDate
     }
 
-    let error = false
+    let date = new Date()
+    let trans = {
+        user_id: user?.id,
+        date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+    }
+
+    let fm = new FormData(form)
+
+    fm.forEach((value, key) => trans[key] = value)
+
+    let findedCard = cards.find(item => +item.id === +trans.card)
+
+    delete findedCard.user_id
+    delete findedCard.currency
+
+    trans.card = findedCard
 
     inps.forEach(inp => {
         if (inp.value.length === 0) {
@@ -38,13 +42,9 @@ form.onsubmit = (e) => {
         }
     });
 
-    if (error) {
-        postData('/transactions', transaction)
-            .then(res => {
-                if (res.status === 200 || res.status === 201) {
-                    location.assign('/pages/transictions/')
-                }
-            })
+    if(error){
+        alert('Типа добавил')
+        location.assign('/pages/transictions/')
     }
 }
 

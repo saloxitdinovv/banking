@@ -1,67 +1,18 @@
 {
-  "users": [
-    {
-      "email": "saloxitdinow@gmail.com",
-      "name": "Saloxitdinov",
-      "surname": "saloxitdinc",
-      "password": "1212",
-      "id": 1
-    },
-    {
-      "email": "lolasadieva1987@gmail.com",
-      "name": "Saloxitdinov",
-      "surname": "saloxitdinc",
-      "password": "1212",
-      "id": 2
-    }
-  ],
-  "cards": [
-    {
-      "user_id": 2,
-      "name": "doni",
-      "currency": "USD",
-      "balance": "100000",
-      "id": 1
-    },
-    {
-      "user_id": 2,
-      "name": "donifff",
-      "currency": "AED",
-      "balance": "10000",
-      "id": 2
-    },
-    {
-      "user_id": 2,
-      "name": "12",
-      "currency": "BDT",
-      "balance": "12",
-      "id": 3
-    }
-  ],
+  "users": [],
+  "cards": [],
   "transactions": [
     {
       "id": 0,
       "user_id": 1,
       "card": {
         "id": 1,
-        "name": "FAXA",
+        "name": "FARRUX",
         "balance": 30000
       },
       "total": 1000,
       "category": "food",
       "date": "2023-10-16"
-    },
-    {
-      "user_id": 2,
-      "card": {
-        "id": 1,
-        "name": "Card Name",
-        "balance": 30000
-      },
-      "total": "12",
-      "category": "12",
-      "date": "2023-10-18",
-      "id": 1
     }
   ]
 }
