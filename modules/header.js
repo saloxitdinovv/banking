@@ -23,7 +23,7 @@ email.innerHTML = user?.email
 image.src = 'https://cdn-icons-png.flaticon.com/128/4043/4043198.png'
 links[0].href = '/'
 links[1].href = '/pages/cards/'
-links[2].href = '/pages/transictions/'
+links[2].href = '/pages/transactions/'
 links[3].href = '/pages/cardID/'
 
 

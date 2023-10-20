@@ -1,3 +1,6 @@
+import { getData } from "../../modules/http"
+import { user } from "/modules/user_data"
+
 let form = document.forms.addTrans
 let inps = form.querySelectorAll('input')
 
@@ -13,20 +16,14 @@ form.onsubmit = (e) => {
         },
         total: form.querySelector('input[name="price"]').value,
         category: form.querySelector('input[name="category"]').value,
-        date: formattedDate
-    }
-
-    let date = new Date()
-    let trans = {
-        user_id: user?.id,
-        date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`
+        date: `${Date.getFullYear}-${Date.getMonth()}-${Date.getDate()}`
     }
 
     let fm = new FormData(form)
 
     fm.forEach((value, key) => trans[key] = value)
 
-    let findedCard = cards.find(item => +item.id === +trans.card)
+    let findedCard = cards.find(item => +item.id === +transaction.card)
 
     delete findedCard.user_id
     delete findedCard.currency
@@ -42,13 +39,13 @@ form.onsubmit = (e) => {
         }
     });
 
-    if(error){
+    if (error) {
         alert('Типа добавил')
-        location.assign('/pages/transictions/')
+        location.assign('/pages/transactions/')
     }
 }
 
-let select = document.querySelector('.selectId')
+let select = document.querySelector('select')
 
 getData('/cards?user_id=' + user.id)
     .then(data => {
@@ -72,18 +69,6 @@ getData('/cards?user_id=' + user.id)
             }
         });
     });
-
-
-
-
-function getCardName() {
-    getData('/cards?user_id=' + user.id)
-        .then(res => {
-            res.forEach(re => {
-                console.log(re.name);
-            })
-        })
-}
 
 
 

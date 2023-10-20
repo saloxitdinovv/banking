@@ -1,6 +1,36 @@
 {
-  "users": [],
-  "cards": [],
+  "users": [
+    {
+      "email": "saloxitdinovv@gmail.com",
+      "name": "12",
+      "surname": "12",
+      "password": "12",
+      "id": 1
+    },
+    {
+      "email": "doniyoroffvv@gmail.com",
+      "name": "12",
+      "surname": "12",
+      "password": "1212",
+      "id": 2
+    }
+  ],
+  "cards": [
+    {
+      "user_id": 2,
+      "name": "12",
+      "currency": "BGN",
+      "balance": "12",
+      "id": 1
+    },
+    {
+      "user_id": 2,
+      "name": "1212eeeee",
+      "currency": "AED",
+      "balance": "10000",
+      "id": 2
+    }
+  ],
   "transactions": [
     {
       "id": 0,
