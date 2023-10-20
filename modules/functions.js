@@ -20,7 +20,7 @@ export function wallets(arr){
         wallet.append(currency)
 
         wallet.onclick = () => {
-            location.assign('/pages/cardID/index.html')
+            location.assign('/pages/cardID/?id=' + item.id)
         }
     }
     

@@ -16,4 +16,3 @@ getData('/cards?user_id=' + user.id)
 
 getData('/transactions?user_id=' + user.id)
     .then(res => transactions(res, tbody))
-console.log(1243);
