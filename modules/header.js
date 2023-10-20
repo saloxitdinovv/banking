@@ -4,7 +4,7 @@ let header = document.querySelector('.box')
 let nav = document.createElement('nav')
 let accountBox = document.createElement('div')
 let links = []
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 3; i++) {
     let link = document.createElement('a')
     link.classList.add(`nav-link_${i + 1}`)
     links.push(link)
@@ -17,14 +17,12 @@ let image = document.createElement('img')
 links[0].innerHTML = 'Главная'
 links[1].innerHTML = 'Мои кошельки'
 links[2].innerHTML = 'Мои транзакции'
-links[3].innerHTML = 'Карта'
 email.innerHTML = user?.email
 // logOut.href = '/pages/signin/'
 image.src = 'https://cdn-icons-png.flaticon.com/128/4043/4043198.png'
 links[0].href = '/'
 links[1].href = '/pages/cards/'
 links[2].href = '/pages/transactions/'
-links[3].href = '/pages/cardID/'
 
 
 image.classList.add('logOutIcon')
@@ -33,7 +31,7 @@ logOut.classList.add('logOut')
 
 
 header.append(nav, accountBox)
-nav.append(links[0], links[1], links[2], links[3])
+nav.append(links[0], links[1], links[2])
 accountBox.append(email, logOut)
 logOut.append(image)
 

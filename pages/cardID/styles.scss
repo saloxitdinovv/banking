@@ -60,25 +60,44 @@ header {
 .card_container {
     margin: 0 auto;
     width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     padding: 50px;
+    gap: 50px;
 
     .card_info {
-        padding: 50px;
+        width: 350px;
+        padding: 15px;
+        border-radius: 25px;
+        box-shadow: 10px 15px 25px 0 #747474;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 12px;
+        grid-column: 1;
+        grid-row: 2;
+        color: #FFF;
+
+        h1 {
+            font-size: 20px;
+        }
+
+        background: #000;
     }
 
     .convertation {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding: 20px;
-        gap: 20px;
+        align-items: self-start;
+        margin-top: 20px;
+        color: #FFF;
+        gap: 10px;
+
+        h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
     }
 
     select {
@@ -101,15 +120,17 @@ header {
 }
 
 .card {
-    width: 500px;
-    height: 300px;
-    border: 2px solid #000;
+    width: 350px;
+    height: 200px;
     border-radius: 25px;
-    padding: 25px;
-    box-shadow: 10px 15px 25px 0 #000;
+    padding: 15px;
+    box-shadow: 10px 15px 25px 0 #747474;
+    background: linear-gradient(84deg, #5f0a87 2.27%, #a4508b 92.26%);
 
     h1 {
         text-align: right;
+        font-size: 25px;
+        color: #f0f0f0;
     }
 
     .info_box {
@@ -119,13 +140,98 @@ header {
         align-items: self-start;
 
         img {
-            width: 80px;
+            width: 50px;
         }
+
         h3 {
-            font-size: 30px;
+            font-size: 25px;
+            color: #f0f0f0;
+            margin-top: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #f0f0f0;
             margin-top: 10px;
         }
     }
 
 }
 
+.card_box {
+    grid-row: 1;
+}
+
+.transactions {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 75px;
+    padding-bottom: 75px;
+
+    h1 {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    a {
+        color: #0047ff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration-line: underline;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px auto;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+tr {
+    border-bottom: 1px solid #b9c0d1;
+}
+
+tr:first-child {
+    border-bottom: none;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+th {
+    color: #b9c0d1;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: start;
+}
+
+td {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.grafik {
+    grid-column: 2/4;
+    grid-row: 1/4;
+    background-size: contain;
+    width: 800px;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-image: url(https://smart-lab.ru/uploads/images/05/31/45/2019/01/16/3aa119.png);
+}

@@ -1,6 +1,12 @@
-import { createCurrs } from "../../modules/functions"
-import { getSymbols, postData } from "../../modules/http"
-import { user } from "/modules/user_data"
+import {
+    createCurrs
+} from "../../modules/functions"
+import {
+    getSymbols, postData
+} from "../../modules/http"
+import {
+    user
+} from "/modules/user_data"
 
 let form = document.forms.addWallet
 let inps = form.querySelectorAll('input')
@@ -45,9 +51,9 @@ form.onsubmit = (e) => {
     });
 
     if (error) {
-        postData('/cards', card)
+        postData('/cards',card)
             .then(res => {
-                if (res.status === 200 || res.status === 201) {
+                if(res.status === 200 || res.status === 201) {
                     location.assign('/pages/cards/')
                 }
             })

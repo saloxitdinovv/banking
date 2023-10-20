@@ -2,32 +2,25 @@
   "users": [
     {
       "email": "saloxitdinovv@gmail.com",
-      "name": "12",
-      "surname": "12",
-      "password": "12",
-      "id": 1
-    },
-    {
-      "email": "doniyoroffvv@gmail.com",
-      "name": "12",
+      "name": "Saloxitdinov",
       "surname": "12",
       "password": "1212",
-      "id": 2
+      "id": 1
     }
   ],
   "cards": [
     {
-      "user_id": 2,
-      "name": "12",
-      "currency": "BGN",
-      "balance": "12",
+      "user_id": 1,
+      "name": "Saloxitdinov",
+      "currency": "AED",
+      "balance": "10000",
       "id": 1
     },
     {
-      "user_id": 2,
-      "name": "1212eeeee",
+      "user_id": 1,
+      "name": "daloxitdinov",
       "currency": "AED",
-      "balance": "10000",
+      "balance": "122112",
       "id": 2
     }
   ],
