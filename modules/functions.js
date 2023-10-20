@@ -21,7 +21,7 @@ export function wallets(arr) {
 
 
         wallet.onclick = () => {
-            location.assign('/pages/cardID/')
+            location.assign('/pages/cardID/?id=' + item.id)
         }
         wallet.onmouseenter = () => {
             wallet.style.transition = '100ms'

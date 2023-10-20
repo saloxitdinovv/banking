@@ -13,21 +13,28 @@
       "user_id": 1,
       "name": "Saloxitdinov",
       "currency": "AED",
-      "balance": "10000",
+      "balance": 9779,
       "id": 1
-    },
-    {
-      "user_id": 1,
-      "name": "daloxitdinov",
-      "currency": "AED",
-      "balance": "122112",
-      "id": 2
     }
   ],
   "transactions": [
     {
       "id": 0,
       "user_id": 1,
+      "card_id": 1,
+      "card": {
+        "id": 1,
+        "name": "FARRUX",
+        "balance": 30000
+      },
+      "total": 1000,
+      "category": "food",
+      "date": "2023-10-16"
+    },
+    {
+      "id": 0,
+      "user_id": 1,
+      "card_id": 2,
       "card": {
         "id": 1,
         "name": "FARRUX",

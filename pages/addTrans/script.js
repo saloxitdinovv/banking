@@ -31,6 +31,7 @@ form.onsubmit = (e) => {
     fm.forEach((value, key) => trans[key] = value)
 
     let findedCard = cards.find(item => +item.id === +trans.card)
+    let saveCard = JSON.stringify(findedCard)
 
     delete findedCard.user_id
     delete findedCard.currency
@@ -43,10 +44,11 @@ form.onsubmit = (e) => {
         alert('Меньше 10usd снять нельзя!')
     } else {
         patchData('/cards/' + findedCard.id, {
+            ...JSON.parse(saveCard),
             balance: findedCard.balance - trans.total
         }).then(res => {
             if(res.status === 200 || res.status === 201) {
-                postData('/transactions', trans)
+                postData('/transactions', {trans, card_id: findedCard.id})
                     .then(res => {
                         if(res.status === 200 || res.status === 201) {
                             alert('Транзакция прошла успешно')
