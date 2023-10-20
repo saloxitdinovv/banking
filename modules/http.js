@@ -1,5 +1,5 @@
 import axios from 'axios'
-
+console.log(axios);
 const BASE_URL = import.meta.env.VITE_BASE_URL
 
 
