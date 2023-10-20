@@ -1,40 +1,27 @@
 {
   "users": [
     {
-      "email": "dsarifkulo021@gmail.com",
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "password": "2232",
+      "email": "saloxitdinovv@gmail.com",
+      "name": "Saloxitdinov",
+      "surname": "12",
+      "password": "1212",
       "id": 1
-    },
-    {
-      "email": "admin@gigy.app",
-      "name": "Daler",
-      "surname": "Daler",
-      "password": "21321312",
-      "id": 2
-    },
-    {
-      "email": "farrux@gmail.com",
-      "name": "Farrux",
-      "surname": "Farruxovich",
-      "password": "1234",
-      "id": 3
     }
   ],
   "cards": [
     {
       "user_id": 1,
-      "name": "Visa",
-      "currency": "USD",
-      "balance": 400,
+      "name": "Saloxitdinov",
+      "currency": "AED",
+      "balance": 9779,
       "id": 1
     }
   ],
   "transactions": [
     {
-      "id": 1,
+      "id": 0,
       "user_id": 1,
+      "card_id": 1,
       "card": {
         "id": 1,
         "name": "FARRUX",
@@ -45,16 +32,17 @@
       "date": "2023-10-16"
     },
     {
+      "id": 0,
       "user_id": 1,
-      "date": "2023-10-18",
+      "card_id": 2,
       "card": {
-        "name": "Visa",
-        "balance": "1000",
-        "id": 1
+        "id": 1,
+        "name": "FARRUX",
+        "balance": 30000
       },
-      "total": "600",
+      "total": 1000,
       "category": "food",
-      "id": 2
+      "date": "2023-10-16"
     }
   ]
 }

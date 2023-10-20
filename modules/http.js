@@ -33,7 +33,7 @@ export const removeData = async (url, id) => {
 
 export const patchData = async (url, body) => {
     const res = await fetch(BASE_URL + url, {
-        method: 'patch',
+        method: 'put',
         body: JSON.stringify(body),
         headers: {
             "Content-Type": "application/json"
