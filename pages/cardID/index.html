@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CARD PAGE</title>
+    <style>
+        .hide_elems {
+            display: none;
+        }
+    </style>
     <link rel="stylesheet" href="styles.scss">
 </head>
 
@@ -15,23 +20,23 @@
         </div>
     </header>
 
-
     <div class="card_container">
+        
         <div class="card_info">
             <h1>Card Name: <span>Visa</span></h1>
-            <h1>Balance: <span>1000$</span></h1>
-
+            <h1>Balance: <span id="balance" >1000$</span></h1>
+            <div class="hidden" >
+            
+            </div>
             <div class="convertation">
-                <span>
+                <span >
                     <h2>Convert from</h2>
-                    <select name="convertor">
-                        <option value="1">UZS</option>
-                    </select>
+                    <input type="text" id="from" readonly>
                 </span>
                 <span>
                     <h2>To</h2>
-                    <select name="convertor">
-                        <option value="1">USD</option>
+                    <select name="convertor" id="to" >
+                        <option value=""></option>
                     </select>
                 </span>
             </div>
@@ -68,6 +73,7 @@
 
     </div>
 
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
     <script type="module" src="../../modules/header.js"></script>
     <script type="module" src="index.js"></script>
     <script type="text/javascript" src="vanilla-tilt.js"></script>
