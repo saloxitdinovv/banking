@@ -64,7 +64,7 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    padding: 50px;
+    padding: 50px 0;
     gap: 50px;
 
     .card_info {
@@ -119,6 +119,60 @@ header {
     }
 }
 
+// .test {
+//     width: 100px;
+//     height: 100px;
+//     position: relative;
+//     left: 30px;
+//     top: 30px;
+//     background-color: lightgreen;
+//     transition: all 2s linear;
+//     -webkit-transform-style: preserve-3d;
+//     -webkit-backface-visibility: hidden;
+//   }
+
+//   .test:after {
+//     content: "";
+//     right: 0px;
+//     bottom: 0px;
+//     position: absolute;
+//     top: 0px;
+//     left: 0px;
+//     background: linear-gradient(black);
+//     -webkit-transform: rotateY(180deg);
+//     -webkit-transform-style: preserve-3d;
+//     -webkit-backface-visibility: hidden;
+//   }
+
+//   .container:hover .test {
+//     -webkit-transform: rotateY(180deg);
+//   }
+.activated .card {
+    -webkit-transform: rotateY(180deg);
+}
+
+.disactivated .card {
+    -webkit-transform: rotateY(0deg);
+}
+
+.card:after {
+    content: var(--id);
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(84deg, #5f0a87 2.27%, #a4508b 92.26%);
+    width: 320px;
+    height: 170px;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 10px 15px 25px 0 #747474;
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+}
+
 .card {
     width: 350px;
     height: 200px;
@@ -126,6 +180,9 @@ header {
     padding: 15px;
     box-shadow: 10px 15px 25px 0 #747474;
     background: linear-gradient(84deg, #5f0a87 2.27%, #a4508b 92.26%);
+    transition: all 2s linear;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
 
     h1 {
         text-align: right;

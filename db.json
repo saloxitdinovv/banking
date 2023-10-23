@@ -1,24 +1,39 @@
 {
-  "users": [
-    {
-      "email": "saloxitdinovv@gmail.com",
-      "name": "Saloxitdinov",
-      "surname": "12",
-      "password": "1212",
-      "id": 1
-    }
-  ],
-  "cards": [
-    {
+  "users": [{
+    "email": "saloxitdinovv@gmail.com",
+    "name": "Saloxitdinov",
+    "surname": "12",
+    "password": "1212",
+    "id": 1
+  }],
+  "cards": [{
       "user_id": 1,
       "name": "Saloxitdinov",
       "currency": "AED",
       "balance": 9779,
       "id": 1
+    },
+    {
+      "name": "123231",
+      "balance": "31231",
+      "id": 2
+    },
+    {
+      "user_id": 3,
+      "name": "eqweqw",
+      "currency": "AUD",
+      "balance": "1233",
+      "id": 3
+    },
+    {
+      "user_id": 3,
+      "name": "rqeqw",
+      "currency": "AED",
+      "balance": 1031,
+      "id": 4
     }
   ],
-  "transactions": [
-    {
+  "transactions": [{
       "id": 0,
       "user_id": 1,
       "card_id": 1,

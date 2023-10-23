@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy';
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    margin-top: 50px;
+    padding: 0 200px;
+}
+
+header {
+    background-color: whitesmoke;
+    padding: 20px 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+a {
+    cursor: pointer;
+}
+
+.headerRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.exit {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+.wallet {
+    width: 240px;
+    height: 160px;
+    background: linear-gradient(to right, blue, red);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+}
+
+.allWallets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.walletName {
+    color: white;
+    font-size: 130%;
+}
+
+.currency {
+    color: white;
+    font-size: 80%;
+    font-weight: bold;
+}

@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "concurrently \"vite\" \"json-server -p 7000 -w db.json\"",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start":"json-server -p 7000 -w db.json"
+    
   },
   "devDependencies": {
     "concurrently": "^8.2.1",
