@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+h1 {
+  margin-bottom: 40px;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form input {
+  outline: none;
+  width: 438px;
+  border-radius: 10px;
+  border: 1px solid #000;
+  background: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: black;
+  padding: 20px 25px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+form input::placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  color: black;
+}
+form button {
+  width: 438px;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  background: #0047ff;
+  padding: 20px 25px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+form button:active {
+  scale: 0.9;
+}
+
+a {
+  margin-top: 30px;
+  text-decoration: none;
+  color: #0047ff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
