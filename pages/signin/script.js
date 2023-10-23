@@ -1,36 +1,42 @@
-let form = document.forms[0];
-let emailInp = document.querySelector(".email");
-let passwordInp = document.querySelector(".password");
+import {
+    getData
+} from "../../modules/http"
 
-form.onsubmit = (event) => {
-  event.preventDefault();
-  let error = false;
-  if (error) {
-  } else {
-    submit();
-  }
-};
-function submit() {
-  let user = {};
-  let fm = new FormData(form);
-  fm.forEach((value, key) => {
-    user[key] = value;
-  });
-  console.log(user);
-  fetch("http://localhost:7000/users")
-    .then((res) => res.json())
-    .then((res) => checking(res));
-}
-function checking(arr) {
-  arr.forEach((item) => {
-    if (item.email === emailInp.value) {
-      if (item.password === passwordInp.value) {
-        window.location.href = "/pages/mainPage/";
-      } else {
-        console.log("wrong password");
-      }
-    } else {
-      console.log("wrong email");
-    }
-  });
+let form = document.forms.signin
+let inputs = form.querySelectorAll('input')
+let inputEmail = document.querySelector('.email')
+let inputPassword = document.querySelector('.password')
+
+form.onsubmit = (e) => {
+    e.preventDefault();
+
+    let error = true
+
+    inputs.forEach((inp) => {
+        if (inp.value.length === 0) {
+            error = false
+            inp.classList.add("error");
+        } else {
+            inp.classList.remove("error");
+        }
+    })
+
+
+    if(!error) return
+
+    getData('/users?email=' + inputEmail.value)
+        .then(res => {
+            if (res.length === 0) return
+
+            let [user] = res
+
+            if (+user.password !== +inputPassword.value) {
+                alert('Wrong password')
+                return
+            }
+
+            delete user.password
+            localStorage.setItem('user', JSON.stringify(user))
+            location.assign('/')
+        })
 }

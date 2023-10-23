@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CARD PAGE</title>
+    <link rel="stylesheet" href="styles.scss" />
+  </head>
+
+  <body>
+    <header>
+      <div class="box"></div>
+    </header>
+
+    <div class="card_container">
+      <div class="card_info">
+        <h1>Card Name: <span>Visa</span></h1>
+        <h1>Balance: <span class="balance">1000$</span></h1>
+
+        <div class="convertation">
+          <span>
+            <h2>Convert from</h2>
+            <select name="convertor">
+              <option value="1">USD</option>
+            </select>
+          </span>
+          <span>
+            <h2>To</h2>
+            <select name="convertor">
+              <option value="1">UZS</option>
+            </select>
+          </span>
+        </div>
+      </div>
+      <div class="card_box disactivated">
+        <div class="card">
+          <h1>VISA</h1>
+
+          <div class="info_box">
+            <img src="img/chip.png" alt="" />
+            <h2 class="balance"></h2>
+            <h3></h3>
+          </div>
+        </div>
+
+        <div class="card_image"></div>
+      </div>
+
+      <div class="grafik"></div>
+    </div>
+
+    <div class="transactions">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>card</th>
+            <th>category</th>
+            <th>total</th>
+            <th>date</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <script type="module" src="../../modules/header.js"></script>
+    <script type="module" src="index.js"></script>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector(".card_box"), {
+        max: 10,
+        speed: 100,
+      });
+    </script>
+  </body>
+</html>

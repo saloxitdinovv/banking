@@ -1,26 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.scss" />
-    <link rel="stylesheet" href="/public/font/stylesheet.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="signUp">
-        <h1>Регистрация</h1>
-        <form>
-          <input type="email" name="email" placeholder="Почта" />
-          <input type="text" name="name" placeholder="Имя" />
-          <input type="text" name="lastname" placeholder="Фамилия" />
-          <input type="password" name="password" placeholder="Пароль" />
-          <button class="reg">Зарегестрироваться</button>
-        </form>
-        <a href="/pages/signin/">Войти</a>
-      </div>
-    </div>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BANKING</title>
+	<script defer type="module" src="/modules/police.js"></script>
+	<link rel="stylesheet" href="/style.scss">
+</head>
+
+<body>
+	<header>
+		<div class="box">
+			
+		</div>
+	</header>
+
+	<div class="greetings">
+		<h1>
+			Добро пожаловать, <span class="user_name"></span>
+		</h1>
+		<p class="user_email"></p>
+	</div>
+
+	<div class="wallets_box">
+		<a href="./pages/cards/">Смотреть все кошельки</a>
+	</div>
+
+	<div class="transactions">
+
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>card</th>
+					<th>category</th>
+					<th>total</th>
+					<th>date</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+
+		
+		<a href="/pages/transactions/">Посмотреть все транзакции</a>
+	</div>
+
+
+
+	<script type="module" src="/modules/header.js"></script>
+	<script type="module" src="/main.js"></script>
+	<script type="module" src="./modules/functions.js"></script>
+	<script type="module" src="./modules/transactions.js"></script>
+</body>
+
 </html>

@@ -1,35 +1,19 @@
-let form = document.forms[0];
-let inps = document.querySelectorAll("input");
+import { user } from "./modules/user_data"
+import { wallets } from "./modules/functions"
+import { transactions } from "./modules/transactions"
+import { getData } from "./modules/http"
 
-form.onsubmit = (event) => {
-  event.preventDefault();
-  let error = false;
-  inps.forEach((inp) => {
-    if (inp.value.length > 0) {
-      error = false;
-    } else {
-      error = true;
-    }
-  });
-  if (error) {
-  } else {
-    submit();
-    window.location.href = "/pages/signin/";
-  }
-};
-function submit() {
-  let user = {};
-  let fm = new FormData(form);
-  fm.forEach((value, key) => {
-    user[key] = value;
-  });
-  localStorage.setItem("user", JSON.stringify(user));
-  console.log(JSON.parse(localStorage.getItem("user")));
-  fetch("http://localhost:7000/users", {
-    method: "post",
-    body: JSON.stringify({ email:user.email,name:user.name,lastname:user.lastname,password:user.password}),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  });
-}
+////////////////////////////////
+let userName = document.querySelector('.user_name')
+let userEmail = document.querySelector('.user_email')
+let tbody = document.querySelector('tbody')
+
+userName.innerHTML = user?.name
+userEmail.innerHTML = user?.email
+////////////////////////////////
+
+getData('/cards?user_id=' + user.id)
+    .then(res => wallets(res))
+
+getData('/transactions?user_id=' + user.id)
+    .then(res => transactions(res, tbody))

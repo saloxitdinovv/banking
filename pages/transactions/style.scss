@@ -101,9 +101,8 @@ header {
 	}
 
 	.wallets {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 30px;
+		display: flex;
+		justify-content: space-between;
 
 		.wallet_1 {
 			width: 282px;
@@ -114,7 +113,6 @@ header {
 			padding: 20px 215px 20px 25px;
 			border-radius: 15px;
 			background: linear-gradient(84deg, #d7816a 2.27%, #bd4f6c 92.26%);
-			cursor: pointer;
 		}
 
 		.wallet_2 {
@@ -126,7 +124,6 @@ header {
 			padding: 20px 215px 20px 25px;
 			border-radius: 15px;
 			background: linear-gradient(84deg, #5f0a87 2.27%, #a4508b 92.26%);
-			cursor: pointer;
 		}
 
 		.wallet_3 {
@@ -138,7 +135,6 @@ header {
 			padding: 20px 215px 20px 25px;
 			border-radius: 15px;
 			background: linear-gradient(84deg, #20bf55 2.27%, #01baef 92.26%);
-			cursor: pointer;
 		}
 
 		.wallet_4 {
@@ -150,7 +146,6 @@ header {
 			padding: 20px 215px 20px 25px;
 			border-radius: 15px;
 			background: linear-gradient(84deg, #380036 2.27%, #0cbaba 92.26%);
-			cursor: pointer;
 		}
 	}
 
