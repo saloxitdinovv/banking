@@ -15,6 +15,20 @@
       "currency": "AED",
       "balance": 9779,
       "id": 1
+    },
+    {
+      "user_id": 1,
+      "name": "doni",
+      "currency": "AED",
+      "balance": "19000",
+      "id": 2
+    },
+    {
+      "user_id": 1,
+      "name": "eeee",
+      "currency": "AED",
+      "balance": "111",
+      "id": 3
     }
   ],
   "transactions": [

@@ -64,8 +64,9 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    padding: 50px;
     gap: 50px;
+    column-gap: 200px;
+    padding-top: 50px;
 
     .card_info {
         width: 350px;
@@ -78,6 +79,7 @@ header {
         grid-column: 1;
         grid-row: 2;
         color: #FFF;
+        margin-top: 50px;
 
         h1 {
             font-size: 20px;
@@ -120,13 +122,6 @@ header {
 }
 
 .card {
-    width: 350px;
-    height: 200px;
-    border-radius: 25px;
-    padding: 15px;
-    box-shadow: 10px 15px 25px 0 #747474;
-    background: linear-gradient(84deg, #5f0a87 2.27%, #a4508b 92.26%);
-
     h1 {
         text-align: right;
         font-size: 25px;
@@ -234,4 +229,44 @@ td {
     height: 500px;
     background-repeat: no-repeat;
     background-image: url(https://smart-lab.ru/uploads/images/05/31/45/2019/01/16/3aa119.png);
+}
+
+.card {
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.front {
+    width: 350px;
+    height: 200px;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 10px 15px 25px 0 #747474;
+    background: linear-gradient(84deg, #5f0a87 2.27%, #a4508b 92.26%);
+
+}
+
+.back {
+    /* Добавьте нужный вам цвет */
+    width: 350px;
+    height: 200px;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 10px 15px 25px 0 #747474;
+    background: linear-gradient(84deg, #5f0a87 2.27%, #a4508b 92.26%);
+    transform: rotateY(-180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
