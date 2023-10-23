@@ -40,8 +40,7 @@ export function wallets(arr, place){
             wallet.append(balance)
 
             wallet.onclick = () => {
-                localStorage.setItem('code', item.id)
-                location.assign('/pages/cardOptions/')
+                location.assign('/pages/cardOptions/?id=' + item.id)
             }
         }
     }

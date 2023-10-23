@@ -42,7 +42,7 @@ export function transactions(arr, place){
             time.innerHTML = item.time
     
             tr.append(aydi, wallet,category, summa, time)
-            table.append(th, tr)
+            table.prepend(th, tr)
         }
         
     }

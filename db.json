@@ -12,8 +12,8 @@
     {
       "user_id": 1,
       "name": "Visa",
-      "currency": "USD",
-      "balance": "1000000",
+      "currency": "BTC",
+      "balance": "300",
       "id": 1
     },
     {
@@ -22,6 +22,13 @@
       "currency": "USD",
       "balance": "1000000",
       "id": 2
+    },
+    {
+      "user_id": 1,
+      "name": "HUMO",
+      "currency": "UZC",
+      "balance": "32000",
+      "id": 3
     }
   ],
   "transactions": [
@@ -32,6 +39,22 @@
       "price": "200000",
       "category": "Одежда",
       "id": 1
+    },
+    {
+      "user_id": 1,
+      "time": "18:19",
+      "card": "Visa",
+      "price": "200000",
+      "category": "Машина",
+      "id": 2
+    },
+    {
+      "user_id": 1,
+      "time": "18:20",
+      "card": "Visa",
+      "price": "200000",
+      "category": "Одежда",
+      "id": 3
     }
   ]
 }

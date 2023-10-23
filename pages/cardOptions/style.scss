@@ -14,6 +14,45 @@ header {
 	background: #f0f0f0;
 }
 
+// .cardEffect{
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	transform-style: preserve-3d;
+// 	transition: all 0.5s ease;
+// }
+
+.front{
+	// position: absolute;
+	width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 215px 20px 25px;
+    border-radius: 15px;
+    color: white;
+    font-size: 30px;
+    background: linear-gradient(84deg, #6e6ad7 2.27%, #5444bb 92.26%);
+	// backface-visibility: hidden;
+}
+
+// .back{
+// 	position: absolute;
+// 	width: 50%;
+//     height: 20vh;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     padding: 20px 215px 20px 25px;
+//     border-radius: 15px;
+//     color: white;
+//     font-size: 30px;
+//     background: linear-gradient(84deg, #6e6ad7 2.27%, #5444bb 92.26%);
+// 	backface-visibility: hidden;
+// 	transform: rotateY(180deg);
+// }
+
 .box {
 	width: 1200px;
 	margin: 0 auto;
@@ -67,41 +106,35 @@ header {
     gap: 100px;
     padding: 30px 0px;
     width: 1500px;
-    height: 40vh;
+    height: 60vh;
 }
 
-.wallet_1 {
-    width: 30%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px 215px 20px 25px;
-    border-radius: 15px;
-    color: white;
-    font-size: 21px;
-    background: linear-gradient(84deg, #6e6ad7 2.27%, #5444bb 92.26%);
-    overflow: hidden;
-}
 .curs{
     display: flex;
     align-items: center;
     flex-direction: column;
     gap: 10px;
+	background-color: #000;
+	border-radius: 20px;
+	border: 50px solid #000;
+	box-shadow: 5px 5px 5px 5px gray;
 }
 .up, .down {
     display: flex;
     align-items: center;
     flex-direction: column;
+	font-size: 25px;
+	color: white;
+
 }
 
 .middle {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(./re.svg);
+    background-image: url(./rep.svg);
 }
 
 table {
